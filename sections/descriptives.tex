@@ -1,0 +1,56 @@
+
+%Faced with the possibility of having to receive a significant number of Spaniards, the Minister of the Interior first requested a census of all public or private premises available in the departments, particularly those that could be used to house refugees (Note d'information du Ministère de l'Intérieur envoyée aux préfets le 26 janvier 1939). Secondly, he called for contact to be made with private initiatives—especially the Red Cross, but also other philanthropic organizations—with the aim of involving them in humanitarian efforts. Lastly, a cost estimate was requested for the construction of barracks in locations that met all necessary conditions for hygiene, sanitation, and supply \citep{perez_rodriguez_indeseables_2022}. 
+
+According to the data, up to the month of July 1939, there were 990 camps in France, hospitals or shelter centres with Spanish exiles in France. Regarding the refugees, 167,932 were combatants, most of whom were spread over 10 concentration camps, 3 hospitals and 2 refugee centres. The rest, a little over 150,000 people, civilians of both sexes and of various ages, were spread over the numerous refugee centres that extended throughout French territory. Most of these centres were managed by the host country itself, while 73 were subsidised by other countries \citep{generalitat_de_catalunya_relacio_2020}. \Cref{fig:map_camps} displays the geographical distribution of internment camps across France in 1939. Camps were not concentrated in a single region but spread widely, with notable clusters in the southern departments near the Spanish border as well as in central and western France. The size of the circles reflects camp capacity, highlighting a particularly dense presence in the Pyrenean area where the first wave of refugees entered. This distribution suggests that exposure to refugees varied considerably across municipalities. 
+
+\begin{figure}[h!]
+  \centering
+  \caption{Location of the refugee camps}
+  \label{fig:map_camps}
+  \includegraphics[width=0.8\linewidth]{figures/descriptives/maps/map7.png}
+\end{figure}
+
+
+
+\begin{figure}[h!]
+    \caption{Locations of the Refugees Camps}
+    \centering
+    \begin{minipage}{0.49\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/descriptives/maps/map7.1.png}
+        \subcaption{Missing, very small and small camps }
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.49 \textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/descriptives/maps/map7.2.png}
+        \subcaption{Medium and Large Size Camps}
+    \end{minipage}
+    \begin{minipage}{0.9\textwidth}
+        \vspace{0.1in} 
+        {\footnotesize Notes: The maps above display the locations of refugees camps across the French territory, per available information and size of camps. \par}
+    \end{minipage}
+\end{figure}
+
+
+
+
+Table \ref{table:balance} reports balance statistics for the variables that are most relevant to assessing potential selection in the French dispersion policy. Because refugee placement was negotiated with departmental and municipal authorities, one concern is that more left-leaning municipalities may have been more willing to receive refugees; we therefore compare pre-war political orientation using the 1936 legislative results \citep{piketty_histoire_2023}. A second concern is municipality size: larger communes might have had more administrative capacity or available facilities, so we test for differences in population levels using historical census data \citep{insee_pop_hist_comm}. Another potential source of bias concerns the presence of other immigrant groups as the authorities may have avoided sending Spanish refugees to municipalities that had already received previous waves of foreigners. Because no city-level data on the share of the foreign population exist for this period, we approximate pre-existing immigrant presence using surname information from death records \citep{insee_deces_2025}. We identify French individuals with Spanish, Italian, or Portuguese surnames and recover their municipality of birth. From the same source, we also construct the share of women aged over twenty-one among the total population in the same age range. Balance in this measure is key considering women became eligible to vote in 1945. This does not pose a concern as long as treated and control municipalities exhibit comparable demographic structures.
+
+Housing availability may have been another potential determinant of camp locations so we include a measure of buildings constructed by 1939 \citep{insee1968logements}. The Ministry of the Interior explicitly encouraged cooperation with private organisations such as the Red Cross and local philanthropic associations so we incorporate a measure of associative activity based on the legal registry of organisations \citep{dila_journalofficiel_portal}. Finally, we include variables capturing geographic and economic structure—altitude, precipitation, and mining activity \citep{pauling2006,camino2021}. Together, these variables allow us to test whether treated and control municipalities differed along the observable dimensions that could plausibly have influenced camp placement under the 1939 dispersion system.
+
+Overall, observable characteristics are broadly similar across the two groups. Treated municipalities exhibit slightly higher support for the SFIO and the PCF, higher share of people with Italian-surnames, higher presence of mines and buildings per capita. Meanwhile, absolute standardized differences are below the conventional threshold of 0.25 \citep{ImbensRubin2015}. The exception is population, what we account for considering as an outcome share of votes with respect to total number of votes. 
+
+\begin{table}[h!]
+    \centering
+    \caption{Balance test for municipalities with and without camps}
+    \resizebox{0.8\textwidth}{!}{
+    \input{tables/descriptive/balance_general}}
+    \label{table:balance}
+\begin{minipage}{0.8\textwidth}
+        \vspace{0.5em}
+\footnotesize
+\textit{Notes:} All variables are measured before 1939, except for buildings per capita that includes 1939 due to limitations in the census. Electoral outcomes correspond to the 1936 legislative elections. 
+\end{minipage}
+
+\end{table}

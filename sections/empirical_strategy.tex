@@ -1,0 +1,28 @@
+
+
+Studying the political effects of immigration requires addressing endogeneity issues that are intrinsic to the topic of immigration: immigrants typically self-select into locations based on local factors related to political outcomes. This historical episode offers a unique opportunity to study the local impact of refugee exposure in a quasi-experimental setting. Because the internment camps were established under severe time constraints, their locations were shaped mainly by logistical considerations. We estimate the effect of exposure to refugee camps on political outcomes using a two-way fixed-effects specification. 
+
+Traditionally, the standard estimator for spatially targeted treatments with geocoded microdata compares units located immediately next to the treated area with units situated slightly farther away. The motivation is that, because treated and control units lie in close physical proximity, they should be exposed to similar time-varying shocks. However, this approach depends on correctly identifying the spatial extent of treatment effects. If the treated ring is defined too narrowly, units in the control ring may still be affected by the treatment, so changes among “controls” no longer recover the counterfactual trend. Conversely, if the treated ring is defined too broadly, untreated units are averaged into the “treated” group, attenuating estimates toward zero. 
+
+\citet{butts_difference--differences_2023} formalize how to adjust the two-way fixed-effects estimator to account for such spatial spillovers. Using his approach, we construct concentric 5-kilometre rings to capture municipalities at varying distances from the refugee camps. \Cref{fig:map_example_methodology} in the Annex shows as an example the department of Gers. This spatial design allows us to identify the treatment effect separately for each ring in the difference-in-differences framework.
+
+\begin{equation}\label{equation:political}
+y_{it} = \tau D_{it}
++ \sum_{j=1}^{n} (1 - D_{it}) Ring_{ij}
++ X_{it}'\beta
++ \mu_i + \lambda_{t \times d} + \varepsilon_{it}
+\end{equation}
+
+
+In this specification, $y_{it}$ denotes the share of vote for a particular party in municipality $i$ at time $t$. The variable $D_{it}$ equals 1 for municipalities that are 1 kilometre close to a refugee camp in periods after treatment, and 0 otherwise. The term $\sum_{j=1}^{n} (1 - D_{it})\, Ring_{ij}$ introduces a set of distance rings, where $Ring_{ij}$ equals 1 if municipality $i$ lies in ring $j$. The rings used in the specification are 2--5 km, 5--10 km, 10--15 km, 15--20 km, and 20--25 km from the nearest camp. The control group consists of municipalities located within 40 km. The factor $(1 - D_{it})$ ensures that spillover effects are estimated only among non-treated municipalities. The coefficient $\tau$ captures the direct effect of hosting a camp, while the coefficients on the ring indicators measure the average spillover effects at different distances. The vector $X_{it}$ includes time-varying control variables, specifically total municipal population. The term $\mu_i$ represents municipality fixed effects, and $\lambda_{t \times d}$ denotes year fixed effects interacted with department fixed effects to absorb common shocks at the department-year level. Standard errors are clustered at the municipality level. 
+
+
+
+
+
+
+
+
+
+
+

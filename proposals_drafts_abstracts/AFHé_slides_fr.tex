@@ -1,0 +1,978 @@
+\documentclass[xcolor=dvipsnames, aspectratio=169]{beamer}
+
+%\setbeamertemplate{frametitle}{\large\insertframetitle}
+\setbeamertemplate{navigation symbols}{}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{smartdiagram}
+\usepackage{natbib}
+\usepackage{caption}
+\usepackage{lscape}
+\usepackage{eurosym}
+\usepackage{appendixnumberbeamer}
+\usepackage{comment}
+\usepackage{caption}
+\usepackage{natbib}
+\bibliographystyle{apalike}
+\usepackage{appendixnumberbeamer}
+\setcitestyle{authoryear}
+\usepackage{hyperref}
+%\usepackage{siunitx}
+%\usepackage{soul}
+%\usepackage[dvipsnames]{xcolor}
+%\sethlcolor{SpringGreen!40}
+
+%\sisetup{
+%    detect-mode,
+%    tight-spacing = true,
+%    group-digits = false,
+%    input-signs = ,
+%    input-symbols = ( ) [ ] - + *,
+%    input-open-uncertainty = ,
+%    input-close-uncertainty = ,
+%    table-align-text-post = false
+%}
+
+\makeatletter
+\def\beamer@tocaction@only#1{\only<.(1)>{\usebeamertemplate**{#1}}}
+\define@key{beamertoc}{subsectionsonly}[]{\beamer@toc@subsectionstyle{show/only}\beamer@toc@subsubsectionstyle{show/shaded/hide}}
+\makeatother
+
+\AtBeginSection[]{
+  \begin{frame}
+  \vfill
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+    \usebeamerfont{title}\insertsectionhead\par%
+  \end{beamercolorbox}
+  \vfill
+  \end{frame}
+}
+
+\mode<presentation>{
+    
+\usecolortheme[named=BrickRed]{structure}
+    \setbeamertemplate{navigation symbols}{}
+    \setbeamerfont{page number in head/foot}{size=\small}
+    \setbeamertemplate{footline}{\hfill\insertframenumber/\inserttotalframenumber\hspace*{0.5em}\vspace{0.1cm}}
+}
+
+
+
+\makeatletter
+\def\beamer@tocaction@only#1{\only<.(1)>{\usebeamertemplate**{#1}}}
+\define@key{beamertoc}{subsectionsonly}[]{\beamer@toc@subsectionstyle{show/only}\beamer@toc@subsubsectionstyle{show/shaded/hide}}
+\makeatother
+
+\AtBeginSection[]{
+  \begin{frame}[plain]
+    \addtocounter{framenumber}{-1} % Prevents this slide from counting
+    \vfill
+    \centering
+    \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+      \usebeamerfont{title}\insertsectionhead\par%
+    \end{beamercolorbox}
+    \vfill
+  \end{frame}
+}
+
+
+\mode<presentation>{
+    \usecolortheme[named=Mahogany]{structure}
+    \setbeamertemplate{navigation symbols}{}
+    \setbeamerfont{page number in head/foot}{size=\small}
+    \setbeamertemplate{footline}{\hfill\insertframenumber/\inserttotalframenumber\hspace*{0.5em}\vspace{0.1cm}}
+}
+
+
+
+\makeatletter
+\newenvironment{withoutheadline}{
+    \setbeamertemplate{headline}[default]
+    \def\beamer@entrycode{\vspace*{-\headheight}}
+}{}
+\makeatother
+
+\setbeamertemplate{itemize item}[circle]
+\setbeamertemplate{itemize subitem}[circle]
+
+\usepackage{threeparttable}
+\usepackage{threeparttablex}
+\usepackage{booktabs}
+
+%------------------------------------------------------------
+
+%------------------------------------------------------------
+% \titlegraphic{\includegraphics[height=0.75cm]{ua_eng_logo.png}} 
+% logo de mon université
+
+\setbeamerfont{title}{size=\large}
+\setbeamerfont{subtitle}{size=\small}
+\setbeamerfont{author}{size=\small}
+\setbeamerfont{date}{size=\footnotesize}
+\setbeamerfont{institute}{size=\footnotesize}
+
+\title[The Political Legacy of Displacement]{
+\vspace{0.3in}
+ \textit{The Political Legacy of Displacement: \\ Evidence from the Spanish Exile}}
+\vspace{0.3in}
+
+
+
+\author[Aranzana, C. \& Paluskiewicz, L.]{Cristina Aranzana$^{*}$ \& Luc Paluskiewicz$^{\dagger}$\\
+\vspace{0.25cm}
+\scriptsize $^{*}$Université de Barcelone \& IEB \\
+\scriptsize $^{\dagger}$École d'Économie de Paris
+}
+
+\date{Congrès de l’Association Française 
+d’Histoire économique \\ \vspace{0.1in}\\  \today}
+
+
+\begin{document}
+
+% Diapositive de titre (non comptée)
+\begingroup
+  \setbeamertemplate{footline}{} % Optionnellement enlever le pied de page pour le titre
+  \begin{frame}
+    \titlepage
+  \end{frame}
+\endgroup
+
+\setcounter{framenumber}{0} 
+
+%------------------------------------------------------------
+
+\begin{frame}{Motivations}
+
+\begin{itemize}
+
+  \item Juin 2025: 117,3 millions de personnes forcées de fuir leur domicile dans le monde entier (HCR, 2025). 
+\vspace{0.4cm}
+  \item La persécution à motivation politique génère une sélection idéologique dans l'exil.
+\vspace{0.4cm}
+  \item Les sociétés d'accueil connaissent une hausse des attitudes anti-immigrants (OIM, 2024)
+\vspace{0.4cm}
+  \item Étudier comment les réactions politiques des sociétés d'accueil émergent, se propagent et persistent est essentiel pour comprendre les conséquences politiques à long terme de ces migrations forcées.
+\end{itemize}
+
+
+\end{frame}
+
+\begin{frame}{Dans ce projet}
+\vspace{0.1in}
+\begin{itemize}
+  \item \textbf{Déplacement de masse de la population espagnole et des forces républicaines} en 1939 vers la France afin d'estimer les effets politiques de l'accueil des réfugiés politiques à différents horizons temporels.
+  \vspace{0.15in}
+  \item Comment les réfugiés politiques ont ils influencés les croyances politiques et l'action collective dans les communautés d'accueil ?
+  \vspace{0.2in}
+  \item Effets à \textbf{court terme :} 
+  \vspace{0.05in}
+  \begin{itemize}
+      \item Les communes exposées aux camps de réfugiés montrent systématiquement un \textbf{moins grand soutien pour les partis de gauche};
+      \vspace{0.1in}
+      \item Influence positive sur l'implication dans les mouvements de Résistance pendant la Seconde Guerre mondiale. 
+      \vspace{0.1in}
+      \item Des preuves suggestives indiquent que le type de contact est important.
+  \end{itemize}. 
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Littérature}
+\begin{itemize}
+    \pause
+    \item Sur l'exil républicain :
+    \begin{itemize}
+    \vspace{0.1in}
+    \item Politiques de répartition, exil : \textcolor{gray}{\citep{DreyfusArmand1999, rafaneau20081939, perez_rodriguez_indeseables_2022}}
+    \vspace{0.1in}
+    \item Implication politique des Espagnols et transmission des valeurs politiques : \textcolor{gray}{\citep{dreyfus-armand_refugies_2016, Coignard2012}}
+    \end{itemize}
+    \pause
+    \vspace{0.1in}
+        \item L'effet de l'exposition aux réfugiés sur les résultats politiques \textcolor{gray}{\citep{halla_immigration_2017, dustmann_refugee_2018, hangartner_refugee_2019, edo_immigration_2019, steinmayr_contact_2021, alesina_political_2024}}.             \vspace{0.1in}
+        \item L'impact des chocs historiques de l'immigration dans le pays de destination à long terme \textcolor{gray}{\citep{tabellini_gifts_2020, schindler_shocking_2021, bursztyn_immigrant_2024, chevalier_forced_2024, ochsner_activated_2024, toews_enemies_2025}}.
+            \vspace{0.1in}
+        \item L'effet de la migration sur la diffusion des idées politiques \textcolor{gray}{\citep{spilimbergo_democracy_2009, barsbai_effect_2017, dippel_leadership_2021, calderon_racial_2023, bazzi_confederate_2023}}        
+\end{itemize}
+
+\end{frame}
+
+\section{Contexte}
+
+\begin{frame}
+  \frametitle{La Guerre civile espagnole (1936-1939)}
+  \footnotesize
+  \begin{itemize}
+    \item \textbf{Contexte :} Tensions entre les républicains et les nationalistes, jeune République, nombreuses instabilités.
+    \vspace{0.1in}
+    \item 17 juillet 1936 : Coup d'État militaire mené par Franco, divisant le pays.
+    \vspace{0.1in}
+    \item \textbf{Deux Camps :} 
+      \begin{itemize}
+        \item Républicains : Coalition de gauche (communistes, socialistes, anarchistes, syndicats, etc.).
+        \item Nationalistes : Menés par Franco (militaires, monarchistes, fascistes).
+      \end{itemize}
+      \vspace{0.1in}
+    \item \textbf{Avril 1939} : Victoire nationaliste, dictature de Franco jusqu'à la transition vers la démocratie en 1975.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{L'arrivée des réfugiés et leur dispersion}
+  \vspace{0.1in}
+  \footnotesize
+  \begin{columns} 
+    \begin{column}{0.6\textwidth}
+      \begin{itemize}
+        \item \footnotesize Entre 1936 et 1939 : Plusieurs vagues de migration suite aux batailles entre républicains et franquistes (\cite{DreyfusArmand1999}).
+        \vspace{0.1in}
+        \begin{itemize}
+        \item[$\Longrightarrow$] \footnotesize Août 1936, depuis le Pays basque. 
+        \vspace{0.1in}
+        \item[$\Longrightarrow$] \footnotesize 1937, assaut final contre Bilbao. 
+        \vspace{0.1in}
+        \item[$\Longrightarrow$] \footnotesize Janvier 1939, depuis Barcelone. 
+                \end{itemize}
+        \vspace{0.1in}
+        \item Civils mais aussi soldats, selon les vagues. 
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.4\textwidth}
+      \begin{figure}
+        \centering        
+        \includegraphics[width=0.95\textwidth]{pictures/le_perthus_réfugiés.jpeg}
+        \vspace{0.05}
+        \caption{Frontière française \textit{Le Perthus} (1939).}
+      \end{figure}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{La Retirada}
+
+  \begin{itemize}
+  \item Avec le début de la guerre civile espagnole en 1936 et l'avancée des troupes de Franco, de nombreux républicains trouvèrent refuge en Catalogne. 
+  \item La défaite des forces républicaines à Barcelone en janvier 1939 $\Longrightarrow$  exode massif de près de \textbf{500 000} personnes vers la France. 
+\end{itemize}
+
+  \begin{center}
+    \includegraphics[width=0.4\textwidth]{pictures/image2.jpg}
+    \caption{\textit{Réfugiés franchissant les Pyrénées} (1939) }
+  \end{center}
+
+
+\end{frame}
+
+\begin{frame}{Politique de dispersion}
+
+
+  \begin{itemize}
+  \item Aucune installation permanente à l'avance $\Longrightarrow$ sélection des sites utilisé pour l'installation des camps de réfugiés précipitée \citep{DreyfusArmand1999}
+  \item Les réfugiés espagnols sont forcés de vivre là où ils ont été assignés, sous la surveillance des autorités. (\cite{perez_rodriguez_indeseables_2022})
+\end{itemize}
+
+  \begin{figure}
+      \centering
+    \includegraphics[width=0.45\textwidth]{pictures/Gurs-Museo-Reina-Sofia-1280x640.jpg}
+    \caption{Camp de \textit{Gurs} (1939)}
+  \end{figure}
+\end{frame}
+
+
+\begin{frame}{Politique de dispersion - Contexte en France}
+Deux ``types" d'accueil: 
+\vspace{0.1in}
+\begin{itemize}
+  \item Les \textit{combattants} étaient principalement localisés dans les camps près de la frontière.
+  \item La \textit{population civile} a été transférée dans des centres d'accueil dispersés à travers la France. 
+  \vspace{0.2in}
+  \item Les autorités françaises encouragent le retour en Espagne (Accords Bérard-Jordana, février 1939) ou l'émigration vers des pays tiers.
+  % le CIARE a calculé qu'environ 400 000 personnes avaient traversé la frontière vers la France. Parmi elles, 60 000 étaient déjà retournées dans la péninsule en juillet 1939. À la fin de 1939, le nombre d'exilés en France était de 140 000 (plus de sélection politique). Certains pays d'Amérique latine ont accueilli les réfugiés. 
+  \vspace{0.2in}
+  \item Beaucoup de ceux qui sont restés ont été forcés d'entrer dans des brigades de travail ou la Légion étrangère. Avec le déclenchement de la guerre, 15 000 se sont joints à la Résistance. 
+  %Fin 1939, environ 50 000 à 60 000 Espagnols servaient dans ces entreprises de travail militarisées à travers la France et 7000 rejoignent la Légion étrangère \citep{academicoup} % EXPLIQUER ICI L'OCCUPATION. Des milliers de républicains espagnols ont ensuite été déportés dans les camps de concentration nazis—le plus tristement célèbre étant Mauthausen, où environ 7 000 sont morts.
+\end{itemize}
+
+
+
+
+\end{frame}
+
+
+\begin{frame}{La fin de la guerre et l'exil}
+  \vspace{0.1in}
+  \footnotesize
+  \begin{columns} 
+    \begin{column}{0.6\textwidth}
+      \begin{itemize}
+        \item Installation du gouvernement en exil de la République espagnole en France puis au Mexique.
+        \vspace{0.2in}
+        \item Statut de réfugiés pour les républicains espagnols:
+        \begin{itemize}
+        \footnotesize
+          \item Rôle actif dans la Résistance pendant la Seconde Guerre mondiale.
+          \item Organisations politiques en exil (UGT, PSOE, CNT) (Herrerín (2004)).
+        \end{itemize}
+        \vspace{0.2in}
+        \item Installation permanente après 1945 et arrivée de nouveaux réfugiés entre 1945 et 1970 \citep{dreyfus-armand_refugies_2016}
+        \vspace{0.2in}
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.4\textwidth}
+      \begin{figure}
+        \centering        
+        \includegraphics[width=0.9\textwidth]{pictures/la_nueve.jpg} % Placeholder for first image
+%        \includegraphics[width=0.45\textwidth]{figures/.jpg} % Placeholder for second image
+        \caption{Soldats républicains sur les Champs-Élysées pour la Libération de Paris (1944).}
+      \end{figure}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+
+
+\begin{frame}{Quel est l'impact sur la société d'accueil ?}{Diffusion ou Backlash?}
+\footnotesize
+  \begin{columns} 
+
+    \begin{column}{0.6\textwidth}
+        \begin{figure}
+            \centering
+            \includegraphics[width= 0.75\textwidth]{pictures/presse1.1.jpg}
+            \caption{Articles de presse (1939).}
+            \label{fig:placeholder}
+        \end{figure}
+    \end{column}
+    \pause
+        \begin{column}{0.5\textwidth}
+   \begin{figure}
+            \centering
+            \includegraphics[width=0.6\textwidth]{pictures/presse3.pdf}
+            \caption{Article du Journal \textit{Le Patriote} (1951).}
+            \label{fig:placeholder}
+            \end{figure}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+
+
+
+
+
+
+
+
+%\begin{frame}{Questions de recherche}
+%\begin{itemize}
+%    \item Quel a été l'impact de cette migration politique ? 
+%    \vspace{0.1in}
+%    \item Mémorisation de l'identité politique/nationale : Combien de temps la mémoire dure-t-elle ? 
+%    \vspace{0.1in}
+%    \begin{itemize}
+%    \end{itemize}
+%    \vspace{0.3in}
+%    \item Différents moments : 
+%    \begin{itemize}
+%        \item \textbf{Court terme} : impact sur les municipalités accueillant les réfugiés entre 1936 et 1939. 
+%        \vspace{0.1in}
+%        \item \textbf{Moyen terme} : les \textit{activités politiques} des réfugiés ont-elles eu un impact (création de syndicats, sections politiques locales des partis, etc.) ? 
+%        \vspace{0.1in}
+%        \item \textbf{Long terme} : transmission intergénérationnelle et mémorisation :
+%        \begin{itemize}
+%            \item la dictature en 1976 et la loi de 2008 pour acquérir la nationalité espagnole. 
+%        \end{itemize}
+%    \end{itemize}
+%\end{itemize}
+%\end{frame}
+
+
+
+\section{Données et Stratégie empirique}
+
+
+
+
+
+
+
+\begin{frame}{Données et archives }
+
+\footnotesize
+\textbf{Exposition aux réfugiés espagnols}
+    \begin{itemize}
+    \footnotesize
+        \item Localisation des camps de réfugiés et des centres en France d'après \citet{generalitat_de_catalunya_relacio_2020}.
+        \item Archives des syndicats et partis politiques sur les lieux d'accueil et les activités politiques en France :
+        \begin{itemize}
+            \footnotesize
+            \item Archives nationales de la CGT (lieux d'accueil pendant la guerre civile).
+            \item Archivos del PSOE / Fundación Pablo Iglesias (Archives de la UGT).
+            \item Confederación Nacional del Trabajo (CNT).
+        \end{itemize}
+    \end{itemize}
+    
+    \vspace{0.1in}
+    \textbf{Résultats politiques}
+    \begin{itemize}
+        \item Résultats des élections législatives (et présidentielles) au niveau municipal, 1900--2024, d'après \citet{piketty_histoire_2023}.
+    \end{itemize}
+    
+    \vspace{0.1in}
+    \textbf{Résistance pendant la guerre}
+    \begin{itemize}
+        \item Registres individuels des reconnaissances officielles des activités de résistance \citep{ministry_of_the_armed_forces_memoire_2022}.
+        \item Actions de Résistance: \textit{Direction de la Sûreté nationale. Fichier de police judiciaire : affaires concernant des attentats (série 15207) entre 1940 et 1946.}
+    \end{itemize}
+      
+    
+
+\end{frame}
+
+
+
+
+
+\begin{frame}{Localisation des camps et définition du traitement}{Effets à court terme}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.48\linewidth]{figures/maps/all_france_refuges_by_size.png}
+        \includegraphics[width=0.48\textwidth]{figures/maps/map_example_methodology.png}
+        \caption{Camps de réfugiés et zone d'exposition -- Département du Gers (32)}
+    \end{figure}
+    
+\end{frame}
+
+
+
+\begin{frame}{Stratégie empirique}
+\textit{Cross section} (résultats pendant la guerre) : 
+\begin{equation}\label{equation:refugees_resistance}
+    y_{m} = \beta \cdot \text{Refugees}_{m} + X_{m} + \delta_{m} + \varepsilon_{m}
+\end{equation}
+\\
+\vspace{0.2in}
+\\
+\textit{Difference-in-differences} (participation politique avant et après la guerre) ;
+\begin{equation}
+     y_{mt} = \beta (host \ refugees_{m} \times Post_t)+ \alpha_{m} + \delta_{t,d} + \epsilon_{mt}
+\end{equation}
+
+\begin{itemize}
+    \item  $y_{mt}$  résultat politique dans la municipalité $m$ au temps $t$
+    \item $host refugees_{m}$ égale 1 si la municipalité a accueilli des réfugiés
+    \item $Post_t$ égale 1 pour les périodes après 1936
+    \item $\alpha_{m}$ et $\delta_{t,d}$ sont les effets fixes de la municipalité et du temps.
+\end{itemize}
+
+
+\end{frame}
+
+ 
+
+%\begin{frame}[label=Strategy]{Stratégie empirique}
+%
+%Dans un cadre où le traitement est défini par des frontières géographiques, l'effet du traitement se répercute sur les unités 'voisines'. \citet{butts_difference--differences_2023} formalisent le modèle à effets fixes bidirectionnels pour ajuster les effets de débordement : 
+%% estimateur couramment utilisé pour les effets des traitements géographiquement ciblés avec des micro-données géocodées. Cet estimateur compare les unités immédiatement voisines du traitement avec celles légèrement plus éloignées.
+%% La méthode est généralement motivée par le fait que les unités traitées et de contrôle sont très proches physiquement (par exemple, ayant accès au même marché du travail et aux mêmes commodités), les chocs au fil du temps devraient être communs à toutes les unités du voisinage : l'hypothèse de tendances communes dans le voisinage.
+%
+%% Seconde hypothèse qui nécessite une identification correcte de la distance à laquelle les effets du traitement sont expérimentés (l'anneau interne).
+%
+%% Si l'anneau traité est trop étroit, les unités dans l'anneau de contrôle subissent les effets du traitement et le changement parmi les unités 'contrôles' n'identifie plus la tendance contrefactuelle. En revanche, si l'anneau traité est trop large, les effets nuls du traitement de certaines unités non affectées sont moyennés dans le changement des unités 'traitées'. Les résultats seront donc atténués vers zéro.
+%
+%% 101 départements 
+%
+%\[
+%y_{it} = \tau D_{it}
+%+ \sum_{j=1}^{n} (1 - D_{it}) Ring_{ij}
+%+ \mu_i + \lambda_{t \times d} + \varepsilon_{it}
+%\]
+%
+%
+%
+%Nous construisons des \textbf{anneaux concentriques} pour capturer les municipalités à différentes distances des camps de réfugiés. \hyperlink{Buffers}{\beamergotobutton{Rings}} \hyperlink{Histogram}{\beamergotobutton{Histogram}} 
+%
+%\end{frame}
+\begin{frame}[label=dispersion]{Politique de dispersion - Balance caractérisiques locales}
+
+\begin{itemize}
+  \item Orientation politique
+    \begin{itemize}
+      \item Résultats électoraux de 1936 \citep{piketty_histoire_2023}
+    \end{itemize}
+  \item Taille des municipalités
+    \begin{itemize}
+      \item Niveaux de population \citep{insee_pop_hist_comm}
+    \end{itemize}
+  \item Présence d'immigrants préexistants
+    \begin{itemize}
+      \item Reconstitution des naissances par noms de famille espagnols/italiens/portugais \citep{insee_deces_2025}
+    \end{itemize}
+  \item Disponibilité de logements
+    \begin{itemize}
+      \item Bâtiments construits avant 1939 \citep{insee1968logements}
+    \end{itemize}
+  \item Activité associative
+    \begin{itemize}
+      \item Registre légal des organisations \citep{dila_journalofficiel_portal}
+    \end{itemize}
+  \item Structure économique
+    \begin{itemize}
+      \item Précipitations, altitude, autorisations minières \citep{pauling2006,camino2021}
+    \end{itemize}
+\end{itemize}
+
+\hyperlink{Balance}{\beamergotobutton{Test d'équilibre}} 
+
+\end{frame}
+
+
+
+\section{Résultats empiriques}
+
+\section{A. Participation politique pendant la guerre}
+
+
+
+
+
+\begin{frame}{Participation politique pendant la guerre}
+
+
+\begin{figure}[H]
+\centering
+
+\begin{minipage}{0.48\textwidth}
+\centering
+\begin{itemize}
+    \item Efffet positif de l'exposition aux réfugiés sur l'implication dans la Résistance de la population locale. 
+    \vspace{0.1in}
+    \item Exposition géographique importante
+    \vspace{0.1in}
+    \item L'ampleur de l'effet  assez grande (+ 10\%).  
+\end{itemize}
+
+\end{minipage}
+\hfill
+\begin{minipage}{0.48\textwidth}
+\centering
+\includegraphics[width=\linewidth]{figures/results/poisson_dep.png}
+\caption{Régression sur le nombre de résistants}
+
+{\tiny Notes: Les erreurs-types sont calculées en utilisant Conley (1999).\\
+Les spécifications incluent les effets fixes départementaux et la composition des noms de famille au lieu de naissance, l'altitude, les mines, la densité et les précipitations moyennes comme contrôles.\par
+}
+\end{minipage}
+
+
+\vspace{0.15cm}
+\end{figure}
+
+\end{frame}
+
+
+\begin{frame}{Participation politique pendant la guerre}
+
+
+\begin{figure}[H]
+\centering
+
+\begin{minipage}{0.48\textwidth}
+\centering
+ 
+\begin{itemize}
+    \item Effet positif et significatif pour les deux types de groupes (civils et militaires). 
+    \vspace{0.1in}
+    \item Effet mesuré plus important pour le contact avec les militaires. 
+    \vspace{0.1in}
+    \item Mécanisme ? 
+    \vspace{0.1in}
+    \item $\Longrightarrow$ Importance du type d'intéraction (\textit{Théorie du contact})
+\end{itemize}
+
+\end{minipage}
+\hfill
+\begin{minipage}{0.48\textwidth}
+\centering
+\includegraphics[width=\linewidth]{figures/results/military_vs_civil_resistance.png}
+\caption{Régression sur le nombre de résistants}
+
+{\tiny Notes: Les erreurs-types sont calculées en utilisant Conley (1999).\\
+Les spécifications incluent les effets fixes départementaux et la composition des noms de famille au lieu de naissance, l'altitude, les mines, la densité et les précipitations moyennes comme contrôles.\par
+}
+\end{minipage}
+
+
+\vspace{0.15cm}
+\end{figure}
+
+\end{frame}
+
+
+
+%\begin{frame}{Effet sur l'implication dans la Résistance et les Actions de Résistance}
+%\begingroup
+%$\Longrightarrow$ Effet positif et important 
+%\centering
+%\resizebox{0.5\textwidth}{!}{
+%\begin{tabular}{lccc}
+%   \toprule
+%    & sabotages & \multicolumn{2}{c}{log(nr résistants)}\\
+%                             & (1)           & (2)           & (3)\\  
+%   \midrule 
+%   log(nr mun. hôtes)         & 0.2106$^{**}$ & 0.0159        &   \\   
+%                             & (0.0979)      & (0.0345)      &   \\   
+%   log(nr réfugiés)          &               &               & 0.0960$^{***}$\\   
+%                             &               &               & (0.0283)\\   
+%   Contrôles                  & $\checkmark$  & $\checkmark$  & $\checkmark$\\   
+%    \\
+%   Observations              & 589           & 589           & 268\\  
+%   R$^2$                     & 0.61196       & 0.66236       & 0.74844\\  
+%   Within R$^2$              & 0.54937       & 0.54101       & 0.60285\\  
+%    \\
+%   Effets fixes Département & $\checkmark$  & $\checkmark$  & $\checkmark$\\   
+%   \bottomrule
+%\end{tabular}}
+% 
+%\par \raggedright 
+%\begin{minipage}{\linewidth}
+%              \vspace{0.8em}
+%              \justifying \footnotesize
+%              \textit{Note:}  Régressions au niveau du canton.
+%              Codes de signification : *** p$<$0.01, ** p$<$0.05, * p$<$0.1.
+%            \end{minipage}
+%\par\endgroup
+%\end{frame}
+%
+
+
+
+
+
+
+
+
+
+
+
+
+\section{B. Impacts politiques sur la population d'accueil}
+
+
+
+\begin{frame}[label=left]{Evolution des votes}
+
+\begin{figure}[htbp]
+  \centering
+  \caption{Impact de l'exposition aux camps de réfugiés sur la part des votes SFIO}
+  \includegraphics[width=0.6\linewidth]{figures/results/pvoixSFIO_all_treatments_2511.png}
+  \label{fig:SFIO_all}
+   \begin{minipage}{0.7\textwidth}
+   \vspace{0.1in} 
+        {\tiny Ce graphique présente les estimations de l'étude d'événements par buffer. Les barres d'erreur représentent l'intervalle de confiance à 95\%. Les erreurs-types sont regroupées au niveau départemental.\par}
+        \end{minipage}
+\end{figure}
+
+
+
+\end{frame}
+
+\begin{frame}[label=left]{Evolution des votes - par région}
+
+\begin{figure}[htbp]
+  \centering
+  \caption{Effet sur la part des votes SFIO - Résultats par région}
+  \includegraphics[width=0.5\linewidth]{figures/results/by_region.png}
+  \label{fig:by_region}
+   \begin{minipage}{0.6\textwidth}
+   \vspace{0.1in} 
+        {\tiny Notes: Ce graphique présente les estimations en laissant une région de côté à la fois dans le cadre de l'analyse classique TWFE spatiale. Les barres d'erreur représentent l'intervalle de confiance à 95\%. Les erreurs-types sont regroupées au niveau municipal.\par}
+        \end{minipage}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}[label=robustness2]{Zone occupée vs non occupée}
+
+\begin{figure}[htbp]
+  \centering
+  \caption{Effet sur la part des votes socialistes - Zones occupées vs non occupées}
+  \includegraphics[width=0.5\linewidth]{figures/results/occupied_2511.png}
+  \label{fig:occupied}
+    \begin{minipage}{0.7\textwidth}
+   \vspace{0.1in} 
+   {\tiny Notes: Cette figure présente les estimations des différences-en-differences séparées pour la zone occupée par les nazis et la zone non occupée de Vichy. Les barres d'erreur montrent les intervalles de confiance à 95\%. Les erreurs-types sont regroupées au niveau municipal.\par}
+        \end{minipage}
+\end{figure}
+
+\hyperlink{line}{\beamergotobutton{Démarcation}} 
+
+\end{frame}
+
+
+
+\begin{frame}{Participation politique pendant la guerre}
+
+
+\begin{figure}[H]
+\centering
+
+\begin{minipage}{0.48\textwidth}
+\centering
+\begin{itemize}
+    \item Effet principalement dû au contact avec les camps accueillant des civils, essentiellement ceux accueillant peu de réfugiés. 
+    \vspace{0.1in}
+    \item $\Longrightarrow$ type de contact important en pour l'effet politique. 
+\end{itemize}
+
+\end{minipage}
+\hfill
+\begin{minipage}{0.48\textwidth}
+\centering
+\includegraphics[width=\linewidth]{figures/results/vote_civil_military_2511.png}
+\caption{Régression sur le nombre de résistants}
+
+{\tiny Notes: Les erreurs-types sont calculées en utilisant Conley (1999).\\
+Les spécifications incluent les effets fixes départementaux et la composition des noms de famille au lieu de naissance, l'altitude, les mines, la densité et les précipitations moyennes comme contrôles.\par
+}
+\end{minipage}
+
+
+\vspace{0.15cm}
+\end{figure}
+
+\end{frame}
+
+
+
+
+%\begin{frame}{Associations}
+%$\longrightarrow$ effet surtout due aux camps de taille importante (camps militaires ou plus réglementés). 
+%\centering
+%\resizebox{0.5\textwidth}{!}{
+%\begingroup
+%\centering
+%\begin{tabular}{lccc}
+%   \toprule
+%    & \multicolumn{3}{c}{nombre d'associations}\\
+%                                   & (1)           & (2)                   & (3)\\  
+%   \midrule 
+%   post $\times$ camps ($>$ 1000)    & 1.245$^{***}$ &                       &   \\   
+%                                   & (0.1779)      &                       &   \\   
+%   post $\times$ camps (100-1000)  &               & 0.1616                &   \\   
+%                                   &               & (0.1729)              &   \\   
+%   post $\times$ camps ($<$100)      &               &                       & -0.1242\\   
+%                                   &               &                       & (0.1348)\\   
+%   Contrôles                        &               &                       & \\  
+%    \\
+%   Observations                    & 151,033       & 151,033               & 151,033\\  
+%   R$^2$                           & 0.77664       & 0.77477               & 0.77476\\  
+%   Within R$^2$                    & 0.00840       & $7.35\times 10^{-5}$  & $2.23\times 10^{-5}$\\   
+%    \\
+%   Effets fixes commune           & $\checkmark$  & $\checkmark$          & $\checkmark$\\   
+%   Effets fixes année-département  & $\checkmark$  & $\checkmark$          & $\checkmark$\\   
+%   \bottomrule
+%\end{tabular}
+% 
+%\par \raggedright 
+%%\begin{minipage}{\linewidth}
+%%              \vspace{0.8em}
+%%              \justifying \footnotesize
+%%              \textit{Note:}  Régressions au niveau du canton.
+%%              Codes de signification : *** p$<$0.01, ** p$<$0.05, * p$<$0.1.
+%%            \end{minipage}
+%\par\endgroup
+%    }
+%\end{frame}
+
+
+
+\section{Conclusion et prochaines étapes}
+
+\begin{frame}{Conclusion}
+A \textit{court terme}, effet potentiels divergents:
+\vspace{0.1in}
+\begin{itemize}
+    \vspace{0.1in}
+        \item Réaction négative en terme de vote (backlash)
+            \vspace{0.1in}
+        \item Potentiel effet positif sur les actes de Résistance durant la Guerre. (diffusion) \\ 
+    \end{itemize}. 
+    \vspace{0.05in} 
+\vspace{0.2in}
+
+\\
+\vspace{0.1in}
+\textbf{Objectif}: Étendre l'analyse aux résultats à moyen et long terme : 
+\begin{itemize}
+    \item Syndicats et organisations politiques en France après la fin de la guerre. 
+\end{itemize}
+%\begin{itemize}
+%    \item Données sur les lieux de refuge après la guerre $\Longrightarrow$ transmission générationnelle des valeurs
+%    
+%    \vspace{0.05in}
+%    
+%    \item Impact sur les conflits sociaux dans les communautés d'accueil.
+%
+%    \vspace{0.05in}
+%
+%    \item Mécanisme de réactivation de la mémoire jusqu'à aujourd'hui. 
+%\end{itemize}
+
+\end{frame}
+
+
+
+\begin{frame}{Participation politique/intégration après la guerre}{\textit{Union General del Trabajo} (UGT) et \textit{Confederacion National del Trabajo} (CNT)}
+\begin{figure}
+            \centering
+            \includegraphics[width=0.48\linewidth]{pictures/actas_1969.png}
+            \includegraphics[width=0.48\linewidth]{pictures/photo_archivos_affiliados.png}
+            \caption{Congrès 1969 et nombre d'\textit{afiliados}.}
+            \label{fig:enter-label}
+        \end{figure}
+                \label{fig:enter-label}
+\end{frame}
+
+\begin{frame}{Migration des réfugiés après la guerre. }
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.48\linewidth]{figures/maps/all_france_camps_per_dep.png}
+        \includegraphics[width=0.48\linewidth]{figures/maps/all_france_ugt_per_dep_bins.png}
+        \caption{Localisation des camps (à gauche) et des fédérations UGT et CNT (à droite).}
+    \end{figure}
+    
+\end{frame}
+
+%\begin{frame}{Carte : localisation des camps.}
+%    \begin{figure}
+%        \centering
+%        \includegraphics[width=0.6\linewidth]{figures/maps/all_france_ugt_cnt_mun_level.png}
+%        
+%        \caption{Localisation des camps et localisation des FFLL UGT et CNT.}
+%    \end{figure}
+%    
+%\end{frame}
+
+
+\begin{frame}{}
+    \centering
+    \vspace{0.8in}
+    \Large Merci! 
+    
+\end{frame}
+
+
+
+\begin{frame}{Associations}
+Autre mécanisme potentiel: vie associative. 
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.8\linewidth]{figures/results/associations.png}
+  \label{fig:by_region}
+\end{figure}
+
+\end{frame}
+
+\appendix
+\section*{Annexe}
+
+\begin{frame}[allowframebreaks]{Bibliographie}
+
+\bibliographystyle{apalike}
+\bibliography{bibliography}
+
+\end{frame}
+
+\begin{frame}[label=Balance]{Descriptives - Test d'équilibre}
+  \begin{center}
+    \includegraphics[width=0.9\textwidth]{figures/descriptives/balance_general.png}
+  \end{center}
+  
+\hyperlink{dispersion}{\beamergotobutton{Retour}}
+
+\end{frame}
+
+\begin{frame}[label=Buffers]{Buffer - Exemple}
+  \begin{center}
+    \includegraphics[width=0.6\textwidth]{figures/maps/map_example_methodology.png}
+  \end{center}
+  
+\hyperlink{Strategy}{\beamergotobutton{Retour à la stratégie}}
+
+\end{frame}
+
+\begin{frame}[label=Histogram]{Histogramme}
+  \begin{center}
+    \includegraphics[width=0.7\textwidth]{figures/descriptives/mun_exposure.png}
+  \end{center}
+  
+\hyperlink{Strategy}{\beamergotobutton{Retour à la stratégie}}
+
+\end{frame}
+
+\begin{frame}[label=right]{Effet sur les partis de droite}
+
+%% Les municipalités exposées à un camp ont en moyenne 2 points de pourcentage de moins en soutien dans cette issue que les municipalités non traitées. 
+
+\begin{center}
+\begin{table}[h!]
+\footnotesize
+    \caption{Effet de l'exposition au camp de réfugiés sur les votes de droite}
+     \resizebox{0.75\textwidth}{!}{\input{tables/spatial_results_pvoteD}}
+    \begin{minipage}{\textwidth}  % Adjust width here
+    \footnotesize
+    \centering 
+    \item Note: Les erreurs-types (SE) sont groupées au niveau de la municipalité. \\ *** p$<$0.01, ** p$<$0.05, * p$<$0.1.
+    \end{minipage}
+\end{table}
+\end{center}
+
+\hyperlink{spatial}{\beamergotobutton{Retour}}
+
+\end{frame}
+\begin{frame}{Effet sur les votes de droite}
+
+\begin{figure}[htbp]
+  \centering
+  \caption{Impact de l'exposition au camp de réfugiés sur le vote des partis de droite par taille de buffer}
+  \includegraphics[width=0.8\linewidth]{figures/results/pvoteD_all_treatments.png}
+  \label{fig:D_all}
+   \begin{minipage}{0.65\textwidth}
+   \vspace{0.1in} 
+        {\tiny Nous agrégeons les parts de votes de droite en utilisant \citet{piketty_histoire_2023} comme référence. Le graphique montre les estimations de l'étude d'événements par buffer. Les barres d'erreur montrent les intervalles de confiance à 95\%. Les erreurs-types sont groupées au niveau municipal.\par}
+        \end{minipage}
+\end{figure}
+  
+\end{frame}
+
+\begin{frame}[label=line]{Ligne de démarcation}
+
+  \begin{center}
+  \includegraphics[width=0.5\textwidth]{pictures/demarcation.png}
+  \end{center}
+
+\hyperlink{robustness2}{\beamergotobutton{Retour à la robustesse}}
+
+\end{frame}
+
+\begin{frame}{Part des votes}
+
+\begin{table}[htbp]
+\centering
+\tiny   % <--- rend la table plus petite
+\caption{Part des votes moyens par parti et par année}
+\input{figures/descriptives/means_votes}
+\label{tab:means_votes}
+
+{\textit{Note:} Un tiret (--) indique que le parti n'a pas présenté de candidats lors de cette élection. \\
+\textit{Source:} \cite{piketty_histoire_2023}.}
+
+\end{table}
+
+\end{frame}
+
+\end{document}

@@ -1,0 +1,110 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[round]{natbib}
+\setcitestyle{authoryear,open={(},close={)}} 
+
+
+\usepackage{mathpazo, amsmath, amssymb, amsfonts, amsthm, microtype, tikz, titling, graphicx, booktabs, caption, subcaption, bm, xfrac, appendix, setspace, comment, float, nth, fnpct, makecell, multirow, tabularx, threeparttable, titling, array, lipsum, mathtools, tocloft, tocvsec2}
+
+
+%\bibliographystyle{abbrvnat}
+\usepackage{enumitem}
+\usepackage{graphics}
+\usepackage{url}
+\linespread{1.5}
+\usepackage[margin=0.8in]{geometry}
+\usepackage{hyperref}
+\usepackage{comment}
+
+\hypersetup{
+    colorlinks,
+    linkcolor={blue!80!black},
+    citecolor={blue!90!black},
+    urlcolor={blue!90!black}, 
+   % urlbordercolor=red,
+   % linkbordercolor=red,
+   % citebordercolor=red,
+   % runbordercolor=red,
+   % citebordercolor=red,
+    %filebordercolor=red
+}
+
+
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage[round]{natbib}
+\usepackage{amsmath,amsthm} 
+\usepackage{engord}
+\usepackage{float}
+\usepackage{subfig}
+\usepackage{pdflscape}
+\usepackage{booktabs}
+\usepackage{pgfplots}
+\usepackage{titleps}
+\usepackage{setspace}
+\usepackage{dcolumn}
+%\usepackage{subcaption}
+
+%references
+\usepackage{cleveref}
+
+%%%%%%%
+\usepackage{blindtext}
+\usepackage{tabularx}
+\usepackage{bbold}
+%%%%%%%
+\usepackage{multirow}
+\usepackage{xr}
+\usepackage{setspace}
+\usepackage{sectsty}
+\usepackage[labelsep=period]{caption} %% This switches %"Table 1: itle" to "Table 1. Title"
+\usepackage{rotating}
+\usepackage{graphics}
+\usepackage{fancyhdr, ifthen}
+\usepackage{blindtext}
+\usepackage{pdflscape}
+
+	
+\usepackage{lineno}
+%\linenumbers
+
+
+\usepackage{amssymb}
+\newtheorem{prediction}{Prediction}
+
+\usepackage{appendix}
+\newcommand{\Appendixautorefname}{appendix}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\footremember}[2]{%
+    \footnote{#2}
+    \newcounter{#1}
+    \setcounter{#1}{\value{footnote}}%
+}
+
+\newcommand{\footrecall}[1]{%
+    \footnotemark[\value{#1}]%
+} 
+
+% Adjust vertical space between main text and footnotes
+\skip\footins=2\baselineskip plus 4pt minus 2pt
+
+%\setlength{\footnotesep}{\baselineskip}
+
+\usepackage{multicol}
+
+\usepackage{threeparttable, booktabs, adjustbox}
+
+\usepackage{subfig} % Required for subfigures
+
+\usepackage[bottom]{footmisc} % Ensure footnotes are always at the bottom
+
+%\flushbottom
+%\raggedbottom
+%\interfootnotelinepenalty=10000
+\interfootnotelinepenalty=10000 % Set a high penalty
+
+

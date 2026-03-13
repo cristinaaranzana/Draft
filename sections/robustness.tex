@@ -1,0 +1,105 @@
+
+
+
+
+
+
+
+We discuss in this section the robustness of our results.\\
+We first show that the backlash phenomenon that we measure is consistent between French geographical regions. To do so, we re-estimate our preferred specification on a series of sub-samples in which we sequentially exclude each broad region from the analysis. We display these results in \autoref{fig:by_region}. Dropping the regions in the North of France, the estimated backlash effect becomes larger in magnitude. This is consistent with the fact that Northern camps were, on average, less visible, of a smaller size and generated fewer local tensions. It is also consistent with the difference in the composition of the hosted population: Northern camps and centres welcome a higher share of women and children, which plausibly reduces the magnitude of the backlash effect we measure. Consistently, when we exclude regions in the South, the estimated coefficient moves towards zero and the implied backlash is smaller, in line with the idea that camps in the South were more visible and politically salient. The pattern of our results is nevertheless preserved across all leave-one-out specifications: the sign of the estimated effect remains unchanged. Overall, this suggests that no single region is driving our main results.
+
+\begin{figure}[htbp]
+  \centering
+  \caption{Effect on socialist vote share - Leave one out results}
+  \includegraphics[width=0.6\linewidth]{figures/results/political/by_region_sfio.png}
+  \label{fig:by_region}
+   \begin{minipage}{0.7\textwidth}
+   \vspace{0.1in} 
+        {\tiny Notes: This graph reports the estimates leaving one region out at the time of the baseline TWFE. Error bars plot the interval confidence at 95\%. Standard errors are clustered at the municipal level.\par}
+        \end{minipage}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \caption{Effect on communist vote share - Leave one out results}
+  \includegraphics[width=0.6\linewidth]{figures/results/political/by_region_pcf.png}
+  \label{fig:by_region}
+   \begin{minipage}{0.7\textwidth}
+   \vspace{0.1in} 
+        {\tiny Notes: This graph reports the estimates leaving one region out at the time of the baseline TWFE. Error bars plot the interval confidence at 95\%. Standard errors are clustered at the municipal level.\par}
+        \end{minipage}
+\end{figure}
+
+Similarly, we verify that our results are not driven by differential dynamics between the part of the country occupied by the German forces (\textit{zone occupée}) and the municipalities under the authority of the Vichy government (\textit{zone libre}). Exploiting this historical division also allows us to use occupation status as a proxy for the local intensity of the Second World War and to check whether our estimates are simply capturing the areas most directly affected by the conflict.
+
+In order to do so, we re-estimate our baseline specification separately for municipalities located in the occupied and in the non-occupied zones. \autoref{fig:occupied} shows the results. Trends between treated and control municipalities are similar when we restrict the sample to the occupied zone and when we restrict it to the non-occupied zone, indicating that our main findings are not specific to one side of the demarcation line. If anything, the estimated backlash is of a larger magnitude in the non-occupied areas, where the largest camps and soldiers refugee settlements are located. If the intensity of the war were driving our results, one would instead expect stronger effects in the occupied zone. This pattern reinforces the interpretation that our estimates capture a backlash mechanism linked to the presence of the camps rather than to wartime violence.
+
+\begin{figure}[htbp]
+  \centering
+  \caption{Effect on socialist vote share - Occupied vs Non-Occupied areas}
+  \includegraphics[width=0.7\linewidth]{figures/results/political/occupied_sfio.png}
+  \label{fig:occupied}
+    \begin{minipage}{0.7\textwidth}
+   \vspace{0.1in} 
+   {\tiny Notes: This figure reports difference-in-differences estimates separately for the Nazi-occupied zone and the non-occupied Vichy zone. Error bars show 95\% confidence intervals. Standard errors are clustered at the municipality level.\par}
+        \end{minipage}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \caption{Effect on communist vote share - Occupied vs Non-Occupied areas}
+  \includegraphics[width=0.7\linewidth]{figures/results/political/occupied_pcf.png}
+  \label{fig:occupied}
+    \begin{minipage}{0.7\textwidth}
+   \vspace{0.1in} 
+   {\tiny Notes: This figure reports difference-in-differences estimates separately for the Nazi-occupied zone and the non-occupied Vichy zone. Error bars show 95\% confidence intervals. Standard errors are clustered at the municipality level.\par}
+        \end{minipage}
+\end{figure}
+
+SYNTHETIC DID 
+
+\begin{table}[h!]
+    \centering
+    \caption{Impact of refugee camp exposure on the vote shares - Synthetic DiD}
+    \resizebox{0.4\textwidth}{!}{\input{tables/results/political/synthetic_rings_manual}}
+    \label{table:table_synthetic}
+    \par
+        \begin{minipage}{0.4\textwidth}
+        \vspace{0.5em}
+            \footnotesize
+            Note: The table reports the synthetic DiD estimates of being located within a given distance ring from the refugee camps. The control group are those within 20-40km.  Standard errors (SE) are obtained using the placebo procedure. *** p$<$0.01, ** p$<$0.05, * p$<$0.1.
+        \end{minipage}
+\end{table}
+
+\begin{figure}[htbp]
+  \centering
+  \caption{Effect on socialist vote share - Comparative between DiD and synthetic DiD}
+  \includegraphics[width=0.7\linewidth]{figures/results/political/comparison_sfio.png}
+  \label{fig:comparison}
+    \begin{minipage}{0.7\textwidth}
+   \vspace{0.1in} 
+   {\tiny Notes: .\par}
+        \end{minipage}
+\end{figure}
+
+\begin{table}[h!]
+    \centering
+    \caption{Impact of refugee camp exposure on the vote shares - Synthetic DiD with covariates}
+    \resizebox{0.4\textwidth}{!}{\input{tables/results/political/rings_sfio_adj}}
+    \label{table:table_synthetic}
+    \par
+        \begin{minipage}{0.4\textwidth}
+        \vspace{0.5em}
+            \footnotesize
+            Note: The table reports the synthetic DiD estimates of being located within a given distance ring from the refugee camps. The control group are those within 20-40km.  Standard errors (SE) are obtained using the placebo procedure. *** p$<$0.01, ** p$<$0.05, * p$<$0.1.
+        \end{minipage}
+\end{table}
+
+
+
+
+
+
+
+
+
