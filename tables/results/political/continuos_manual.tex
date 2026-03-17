@@ -1,0 +1,27 @@
+\begin{table}[h!]
+\centering
+\caption{Impact of Camps and Refugees on Vote Shares (TWFE)}
+\label{tab:twfe_camps_refugees}
+\begin{tabular}{lcccc}
+\hline
+ & \multicolumn{2}{c}{SFIO vote share} & \multicolumn{2}{c}{PCF vote share} \\
+ & (1) Camps & (2) Refugees & (3) Camps & (4) Refugees \\
+\hline
+
+Post $\times$ Camps (1 km) 
+& -0.0159*** &  & 0.0115*** &  \\
+ & (0.00347) &  & (0.00323) &  \\
+
+Post $\times$ Refugees (1 km) 
+&  & -3.20e-06** &  & 3.97e-07 \\
+ &  & (1.11e-06) &  & (1.01e-06) \\
+
+\hline
+Observations & 74,781 & 74,781 & 74,781 & 74,781 \\
+Municipality FE & Yes & Yes & Yes & Yes \\
+Year $\times$ Arrondissement FE & Yes & Yes & Yes & Yes \\
+\hline
+\multicolumn{5}{l}{\footnotesize Standard errors clustered at the municipality level in parentheses.} \\
+\multicolumn{5}{l}{\footnotesize *** $p<0.01$, ** $p<0.05$, * $p<0.1$.}
+\end{tabular}
+\end{table}

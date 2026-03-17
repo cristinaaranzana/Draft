@@ -6,7 +6,7 @@
 \begin{figure}[htbp]
   \centering
   \caption{Refugee Camps and Exposure Buffers}
-  \includegraphics[width=0.6\linewidth]{figures/maps/map_example_methodology.png}
+  \includegraphics[width=0.6\linewidth]{figures/descriptives/maps/map_example_methodology.png}
   \label{fig:map_example_methodology}
    \begin{minipage}{0.7\textwidth}
    \vspace{0.1in} 
@@ -31,7 +31,7 @@
 
 \begin{table}[h!]
     \centering
-    \caption{Impact of refugee camp exposure on right-wing support}
+    \caption{Impact of refugee camps on right-wing support}
     \resizebox{0.6\textwidth}{!}{\input{tables/results/political/spatial_results_pvoteD}}
     \label{table:right_results}
         \vspace{0.5em}
@@ -41,10 +41,34 @@
         \end{minipage}
 \end{table}
 
+
 \begin{figure}[htbp]
   \centering
-  \caption{Impact of refugee camps by size on the socialist vote share}
-  \includegraphics[width=0.8\linewidth]{figures/results/political/communist_size.png}
+  \caption{Impact of refugee camps on socialist vote share - ring estimations}
+  \includegraphics[width=0.8\linewidth]{figures/results/political/pvoixSFIO_event_study.png}
+  \label{fig:SFIO_all}
+   \begin{minipage}{0.7\textwidth}
+        \vspace{0.5em}
+        {\footnotesize Notes: This graph reports the estimates from \cref{equation:political}, where the coefficient for each ring is estimated using municipalities located 20–40 km away as the control group. Error bars plot the interval confidence at 95\%. Standard errors are clustered at the municipality level.\par}
+        \end{minipage}
+\end{figure}
+
+
+\begin{figure}[htbp]
+  \centering
+  \caption{Impact of refugee camps on communist vote shares - ring estimations}
+  \includegraphics[width=0.8\linewidth]{figures/results/political/pvoixPCF_event_study.png}
+  \label{fig:PCF_all}
+   \begin{minipage}{0.7\textwidth}
+        \vspace{0.5em}
+        {\footnotesize Notes: This graph reports the estimates from \cref{equation:political}, where the coefficient for each ring is estimated using municipalities located 20–40 km away as the control group. Error bars plot the interval confidence at 95\%. Standard errors are clustered at the municipality level.\par}
+        \end{minipage}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \caption{Impact of refugee camps on the socialist vote share - by size}
+  \includegraphics[width=0.8\linewidth]{figures/results/political/sfio_size.png}
   \label{fig:SFIO_all}
    \begin{minipage}{0.7\textwidth}
         \vspace{0.5em}
@@ -54,8 +78,8 @@
 
 \begin{figure}[htbp]
   \centering
-  \caption{Impact of refugee camps by size on the socialist vote share}
-  \includegraphics[width=0.8\linewidth]{figures/results/political/sfio_size.png}
+  \caption{Impact of refugee camps on the communist vote share - by size}
+  \includegraphics[width=0.8\linewidth]{figures/results/political/communist_size.png}
   \label{fig:SFIO_all}
    \begin{minipage}{0.7\textwidth}
         \vspace{0.5em}

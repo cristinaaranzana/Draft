@@ -61,7 +61,7 @@ SYNTHETIC DID
 \begin{table}[h!]
     \centering
     \caption{Impact of refugee camp exposure on the vote shares - Synthetic DiD}
-    \resizebox{0.4\textwidth}{!}{\input{tables/results/political/synthetic_rings_manual}}
+    \resizebox{0.4\textwidth}{!}{\input{tables/results/political/synthetic_rings_combined}}
     \label{table:table_synthetic}
     \par
         \begin{minipage}{0.4\textwidth}
@@ -82,24 +82,65 @@ SYNTHETIC DID
         \end{minipage}
 \end{figure}
 
-\begin{table}[h!]
-    \centering
-    \caption{Impact of refugee camp exposure on the vote shares - Synthetic DiD with covariates}
-    \resizebox{0.4\textwidth}{!}{\input{tables/results/political/rings_sfio_adj}}
-    \label{table:table_synthetic}
-    \par
-        \begin{minipage}{0.4\textwidth}
-        \vspace{0.5em}
-            \footnotesize
-            Note: The table reports the synthetic DiD estimates of being located within a given distance ring from the refugee camps. The control group are those within 20-40km.  Standard errors (SE) are obtained using the placebo procedure. *** p$<$0.01, ** p$<$0.05, * p$<$0.1.
+
+\begin{figure}[htbp]
+  \centering
+  \caption{Effect on communist vote share - Comparative between DiD and synthetic DiD}
+  \includegraphics[width=0.7\linewidth]{figures/results/political/comparison_pcf.png}
+  \label{fig:comparison}
+    \begin{minipage}{0.7\textwidth}
+   \vspace{0.1in} 
+   {\tiny Notes: .\par}
         \end{minipage}
-\end{table}
+\end{figure}
 
 
+\begin{figure}[htbp]
+  \centering
+  \caption{Effect on socialist vote share - Synthetic event study}
+  \includegraphics[width=0.7\linewidth]{figures/results/political/sdid_event_SFIO.png}
+  \label{fig:comparison}
+    \begin{minipage}{0.7\textwidth}
+   \vspace{0.1in} 
+   {\tiny Notes: .\par}
+        \end{minipage}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \caption{Effect on communist vote share - Synthetic event study}
+  \includegraphics[width=0.7\linewidth]{figures/results/political/sdid_event_PCF.png}
+  \label{fig:comparison}
+    \begin{minipage}{0.7\textwidth}
+   \vspace{0.1in} 
+   {\tiny Notes: .\par}
+        \end{minipage}
+\end{figure}
 
 
+CONTINUOUS DID 
 
+The table is significant 
+\input{tables/results/political/continuos_manual}
 
+\begin{figure}[htbp]
+  \centering
+  \caption{Effect on socialist vote share - Continous DiD}
+  \includegraphics[width=0.7\linewidth]{figures/results/political/cont_es_sfio_camps.png}
+  \label{fig:comparison}
+    \begin{minipage}{0.7\textwidth}
+   \vspace{0.1in} 
+   {\tiny Notes: .\par}
+        \end{minipage}
+\end{figure}
 
-
-
+\begin{figure}[htbp]
+  \centering
+  \caption{Effect on communist vote share - Continous DiD}
+  \includegraphics[width=0.7\linewidth]{figures/results/political/cont_es_pcf_camps.png}
+  \label{fig:comparison}
+    \begin{minipage}{0.7\textwidth}
+   \vspace{0.1in} 
+   {\tiny Notes: .\par}
+        \end{minipage}
+\end{figure}

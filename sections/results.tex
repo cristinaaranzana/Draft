@@ -2,53 +2,40 @@
 
 \subsection{Results in voting}
 
-COMMENT TURNOUT 
+We next examine how exposure to refugee camps affected electoral participation and support for left-wing parties. \Cref{table:all_parties_combined} reports estimates for voter turnout, the socialist party (SFIO: “Section Fran\c{c}aise de l’Internationale Ouvri`ere”), and the communist party (PCF: “Parti Communiste Français"). For each outcome, the first specification compares municipalities located within 1 km of a camp to those between 20 and 40 km, while the second specification implements \Cref{equation:political} and allows for spatial spillovers by including concentric distance rings up to 30 km. The results show that proximity to refugee camps increased electoral participation. Municipalities located within 1 km of a camp experienced a rise in turnout of about 2.0–2.6 percentage points relative to the control group, which corresponds to an increase of around 2–3\% relative to the baseline level of participation. The spatial specification indicates that this effect is concentrated very close to the camps and declines rapidly with distance.
+
+Turning to party support, the estimates reveal a redistribution of votes within the left. Municipalities located within 1 km of a camp show a statistically significant decline in the socialist vote share of around 1.5–2.8 percentage points, which represents a reduction of 8-15\% compared to the pretreatment mean. Meanwhile, the communist vote share increases by approximately 1.7–2.4 percentage points; an increase of approximately 30-40\% of the communist vote share. The spatial specification shows that the increase in communist support extends beyond the immediate vicinity of the camps, remaining positive and statistically significant up to roughly 25 km, whereas the reduction in socialist support is concentrated closer to the camps. Right-wing parties are not comparable before and after the shock because there is no single party that exists continuously throughout the entire period of analysis.\footnote{Throughout the interwar and post-war years, the composition of the French right changed substantially. Key parties present before the war—such as the Fédération républicaine or the Alliance démocratique—either disappeared, were absorbed, or were replaced after 1945 by entirely new formations like the MRP or, later, the Gaullist RPF.} We report the results for right-wing support in the Appendix using the party aggregation proposed by \citet{piketty_histoire_2023}, which yields a positive effect that is only statistically significant at the 10\% level.
 
 \begin{table}[h!]
     \centering
-    \caption{Impact of refugee camp exposure on turnout}
-    \resizebox{0.6\textwidth}{!}{\input{tables/results/political/spatial_results_turnout}}
-    \label{table:communist_results}
+    \caption{Impact of refugee camp exposure on political outcomes}
+    \resizebox{0.9\textwidth}{!}{\input{tables/results/political/all_parties_combined}}
+    \label{table:all_parties_combined}
         \vspace{0.5em}
-        \begin{minipage}{0.6\textwidth}
+        \begin{minipage}{0.9\textwidth}
             \footnotesize
-            Note: In the first column, we estimate \cref{equation:political}. In the second column, the control group are those within 20-40km.  Standard errors (SE) are clustered at the municipality level. *** p$<$0.01, ** p$<$0.05, * p$<$0.1.
+            Note: In the first column of each outcome, the control group are those within 20-40km. In the second column, we estimate \cref{equation:political} restricting the control group to those up to 50km.  Standard errors (SE) are clustered at the municipality level. *** p$<$0.01, ** p$<$0.05, * p$<$0.1.
         \end{minipage}
 \end{table}
 
+
+\Cref{fig:turnout_event_study} presents the results of the dynamic DiD analysis, estimating the effect of proximity to refugee camps on voter turnout across distance rings. The figure shows a clear increase in turnout in municipalities located within 1 km of a camp, with effects that gradually decline over time until 1956. Positive but smaller effects are also observed for municipalities located 1–5 km and 5–10 km from the camps. In contrast, there is no statistically significant effect for municipalities located between 15 and 20 km.  \Cref{fig:event_study_all} presents the dynamic DiD estimates for both the communist and the socialist parties. The French left underwent important political realignments during the pre-treatment period, notably the Cartel des Gauches in 1924 and the Popular Front alliance in 1936, which likely explain the observed pre-trends, particularly around the 1924 election. After the war, the estimates show a clear break in the trend: support for the communist party increases sharply in 1945, while the socialist party experiences a decline, with both effects gradually fading over time. \Cref{fig:PCF_all} and \Cref{fig:SFIO_all} in the Appendix show that these effects attenuate with distance from the camps. While the magnitude of the estimates decreases for municipalities located further away, the presence of spillovers supports the use of municipalities located between 20 and 40 km from the camps as the control group.
+
 \begin{figure}[htbp]
   \centering
-  \caption{Impact of Refugee Camp Exposure on turnout - ring estimations}
+  \caption{Impact of refugee camp exposure on turnout - ring estimations}
   \includegraphics[width=0.8\linewidth]{figures/results/political/turnout_event_study.png}
-  \label{fig:SFIO_all}
+  \label{fig:turnout_event_study}
    \begin{minipage}{0.7\textwidth}
         \vspace{0.5em}
-        {\footnotesize Notes: This graph reports the estimates from \cref{equation:political}, where the coefficient for each ring is estimated using municipalities located 20–40 km away as the control group. Error bars plot the interval confidence at 95\%. Standard errors are clustered at the municipality level.\par}
+        {\footnotesize Notes: This graph reports the estimates from \cref{equation:political}, where the coefficient for each ring is estimated using municipalities located 20–40 km away as the control group, excluding municipalities in the inner rings. Error bars plot the interval confidence at 95\%. Standard errors are clustered at the municipality level.\par}
         \end{minipage}
 \end{figure}
-
-
-We examine how exposure to refugee camps affected political outcomes. The analysis focuses on the vote share of the SFIO (“Section Fran\c{c}aise de l’Internationale Ouvri`ere”), the socialist party, because it is the only political group that spans the entire period under study and it does not experience major ideological transformations before and after our treatment. \Cref{table:SFIO_results} shows several difference-in-differences specifications to examine the effect of hosting a camp on the share of votes of the socialist party. In the first column, we compare treated municipalities (those within 1 km) with cities within 40 km as controls. In the second column, we compare units treated units to those further away (within 20 to 40 km). The third column shows the coefficients of \Cref{equation:political}, which accounts for spatial spillovers by including a set of concentric circles. The results show a significant reduction in the share of votes for the socialist party in all the specifications. In our preferred specification, municipalities exposed to a camp have on average 2,7 percentage points lower vote share for the socialist party, which represents a 10\% reduction with respect to the pretreatment mean. 
-
-\begin{table}[h!]
-    \centering
-    \caption{Impact of refugee camp exposure on socialist vote share}
-    \resizebox{0.6\textwidth}{!}{\input{tables/results/political/spatial_results_pvoixSFIO}}
-    \label{table:SFIO_results}
-        \begin{minipage}{0.6\textwidth}
-        \vspace{0.5em}
-            \footnotesize
-            Note: In the first column, we estimate \cref{equation:political}. In the second column, the control group are those within 20-40km.  Standard errors (SE) are clustered at the municipality level. *** p$<$0.01, ** p$<$0.05, * p$<$0.1.
-        \end{minipage}
-\end{table}
-
-\Cref{fig:SFIO_all} shows the results of the event study by buffer size - within 1 km, within 10 km away and 20 km - considering the municipalities within 40 km as control group. Before the war, the coefficients suggest no systematic pre-trend for the estimations of municipalities that are nearby camps. After 1945, however, municipalities exposed to refugee camps record a persistent decline in SFIO support, with estimates becoming increasingly negative through the 1950s. This pattern is consistent with a political backlash: exposure to the camps may have deteriorated the image of the socialist left, historically associated with solidarity and internationalism, eroding their electoral support. The figure also shows significant spillovers effects to nearby municipalities. For municipalities within 30 km, the effects vanish because the buffer increasingly draws in control municipalities. 
-
 
 \begin{figure}[htbp]
   \centering
-  \caption{Impact of Refugee Camp Exposure on socialist vote share - ring estimations}
-  \includegraphics[width=0.8\linewidth]{figures/results/political/pvoixSFIO_event_study.png}
+  \caption{Impact of refugee camp exposure on the communist and socialist}
+  \includegraphics[width=0.8\linewidth]{figures/results/political/event_study_all.png}
   \label{fig:SFIO_all}
    \begin{minipage}{0.7\textwidth}
         \vspace{0.5em}
@@ -57,50 +44,17 @@ We examine how exposure to refugee camps affected political outcomes. The analys
 \end{figure}
 
 
-Right-wing parties are not comparable before and after the shock because there is no single party that exists continuously throughout the entire period of analysis.\footnote{Throughout the interwar and post-war years, the composition of the French right changed substantially. Key parties present before the war—such as the Fédération républicaine or the Alliance démocratique—either disappeared, were absorbed, or were replaced after 1945 by entirely new formations like the MRP or, later, the Gaullist RPF.} We include the results on right-wing support in the Annex using the aggregation done by \citet{piketty_histoire_2023}, which shows a positive and significant effect, in line with our main results. 
-
-
-\Cref{table:communist_results} extends this analysis by examining responses at the far left of the spectrum, focusing on the Communist Party. Because the PCF first appears in the 1924 legislative elections, caution is required due to limited pre-treatment periods. Nonetheless, once spatial spillovers are accounted for, we find that exposure to the camps increases the PCF vote share: municipalities within 1 km record an increase of roughly 1.6 percentage points or 15\% increase with respect to the pretreatment mean. The effects gradually decline toward zero as distance increases. 
-
-
-\begin{table}[h!]
-    \centering
-    \caption{Impact of refugee camp exposure the communist vote shares}
-    \resizebox{0.6\textwidth}{!}{\input{tables/results/political/spatial_results_pvoixPCF}}
-    \label{table:communist_results}
-    \vspace{0.5em}
-        \begin{minipage}{0.6\textwidth}
-            \footnotesize
-            Note: In the first column, we estimate \cref{equation:political}. In the second column, the control group are those within 20-40km.  Standard errors (SE) are clustered at the municipality level. *** p$<$0.01, ** p$<$0.05, * p$<$0.1.
-        \end{minipage}
-\end{table}
-
-COMMENT EVENT STUDY 
-
-\begin{figure}[htbp]
-  \centering
-  \caption{Impact of refugee camp exposure the communist vote shares - ring estimations}
-  \includegraphics[width=0.8\linewidth]{figures/results/political/pvoixPCF_event_study.png}
-  \label{fig:SFIO_all}
-   \begin{minipage}{0.7\textwidth}
-        \vspace{0.5em}
-        {\footnotesize Notes: This graph reports the estimates from \cref{equation:political}, where the coefficient for each ring is estimated using municipalities located 20–40 km away as the control group. Error bars plot the interval confidence at 95\%. Standard errors are clustered at the municipality level.\par}
-        \end{minipage}
-\end{figure}
-
-
-We argue that the political effect that we document depends on the size of the camps the local population are exposed to. The effects of refugees camps by the size of the camp are jointly estimated in the same regression. In \autoref{fig:PCF_SFIO_camps_sizes}, we show the ATT on the share of votes for the SFIO and the PCF within a buffer of 1 kilometre of exposure, depending on the size of the camps they are exposed as defined by the quartile in terms of refugees population\footnote{See \autoref{fig:bars_camps_sizes} for the definition of the quartiles.}. The exposure to a camps with a refugee population lower than 20 individuals does not have any significant effect on the vote for the communist party after the war, and is slight significant for the socialist party. Overall, we observe a positive correlation between the size of the camp population and both the magnitude and statistical significance of the effect that we measure. EVENT STUDIES IN THE ANNEX. 
-
+We next explore whether the political effects we document depend on the size of the refugee camps to which local populations were exposed. \Cref{fig:effect_size} reports the estimated effects on the vote shares of the socialist and communist parties for municipalities located within 1 km of a camp, distinguishing camps by size. Camp size is defined according to quartiles of the refugee population hosted in each camp (see \Cref{fig:bars_camps_sizes} in the Appendix for the definition of these quartiles). The magnitude of the effects generally grows with camp size, reaching its largest values for medium and large camps. In contrast, the effects are smaller for municipalities exposed to very small camps and are close to zero for the group with missing size information. Overall, the results suggest that the political impact of refugee camps is stronger where the local population was exposed to a larger concentration of refugees, consistent with a more intense local exposure generating larger electoral responses.
 
 
 \begin{figure}[h!]
   \centering
   \caption{Impact on the Share of Votes, per Size of Camps}
   \includegraphics[width=0.8\linewidth]{figures/results/political/effect_size.png}
-  \label{fig:PCF_SFIO_camps_sizes}
+  \label{fig:effect_size}
    \begin{minipage}{0.7\textwidth}
    \vspace{0.1in} 
-        {\tiny This graph reports the jointly estimated average treatment effects of the different camps, by size, on vote shares for the Socialists (SFIO) and the Communists (PCF). The control municipalities are those within 20-40 km. The distribution of the population camps and their categorization per population quartiles is reported in \autoref{fig:bars_camps_sizes}.Error bars plot the interval confidence at 95\%. Standard errors are clustered at the department level.\par}
+        {\tiny This graph reports the jointly estimated average treatment effects of the different camps, by size, on vote shares for the Socialists and the Communists. Treated municipalities are those up to 1 km away from the camp and the control municipalities are those within 20-40 km. The distribution of the population camps and their categorization per population quartiles is reported in \autoref{fig:bars_camps_sizes}. The effects of camps of different sizes are estimated jointly within the same regression specification. Error bars plot the interval confidence at 95\%. Standard errors are clustered at the municipal level.\par}
         \end{minipage}
 \end{figure}
 
@@ -111,8 +65,6 @@ We argue that the political effect that we document depends on the size of the c
 
 We now examine whether the effects differ across the political spectrum to explore political polarization and diffusion of ideas. We explore the relationship between the location of the camps and the resistance movement to explore the effect on the behaviour among a politically selective minority rather than population-wide responses. These measures reflect actions taken by individuals who were already highly engaged in political or civic life. Several organizations were especially active in mobilizing around the arrival of the Spanish refugees: the General Confederation of Labour (CGT), professional unions and cooperative federations. Members of these groups were more likely to interact directly with the Republican refugees. If ideas brought by the refugees diffused locally, politically active individuals are the ones most likely to internalize and act upon them. Any diffusion mechanism would therefore be expected to appear at the political extremes, where responses may diverge from those of the average voter.
 
-%collaborators: and \Cref{fig:collabos} 
-%in the case of resistance, whereas it remains significant up to 15 km for collaboration. This pattern cannot be explained by political selection in the siting of the camps. Instead, it aligns with increasing political polarization in municipalities closer to the camps. 
 
 \Cref{fig:resistants} displays coefficient estimates by distance to the nearest refugee camp, with each point corresponding to a separate regression. The results indicate a positive association between proximity to a camp and resistance participation. This effect is concentrated within 3 km and disappears at larger distances. Within this radius, camp proximity is associated with an approximately 13\% increase in the expected number of individuals participating in the resistance, corresponding to about 1.5 additional individuals per municipality. This pattern is consistent with the results on the communist party, considering the links between the PCF and the resistance movement. 
 
@@ -156,3 +108,5 @@ We further explore the political mobilization impact of exposure to Spanish refu
             Note: The table above reports coefficient of the Poisson estimates difference-in-differences regression at the canton level, comparing canton that have welcomed refugees with the ones that have not. Here treatment is only taking into account medium-size and large-size camps. To ensure comparability, control only takes into account the canton that are within a buffer of 40 km around this types of camps. We control for the total population of the canton per year as well as for the left-wing last election results. Our main specification takes into account canton fixed effects and arrondissement $\times$ year fixed effect. *** p$<$0.01, ** p$<$0.05, * p$<$0.1.
         \end{minipage}
 \end{table}
+
+
