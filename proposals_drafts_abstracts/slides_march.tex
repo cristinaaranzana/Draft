@@ -378,8 +378,9 @@ We construct \textbf{concentric rings} to capture municipalities at different di
 
 \section{Preliminary Results}
 
+\subsection{Voting}
 
-\begin{frame}[label=turnout]{Preliminary Results - Turnout}
+\begin{frame}[label=turnout]{Results: Voting}
 
 \begin{center}
 \begin{table}[h!]
@@ -397,7 +398,7 @@ We construct \textbf{concentric rings} to capture municipalities at different di
 
 \end{frame}
 
-\begin{frame}{Preliminary Results - Socialist}
+\begin{frame}[label=spatial]{Results: Voting}
 
 \begin{center}
 \begin{table}[h!]
@@ -412,9 +413,11 @@ We construct \textbf{concentric rings} to capture municipalities at different di
 \end{table}
 \end{center}
 
+\hyperlink{right}{\beamergotobutton{Right-wing}}
+
 \end{frame}
 
-\begin{frame}[label=left]{Preliminary Results - Communist}
+\begin{frame}[label=left]{Results: Voting}
 
 \begin{center}
 \begin{table}[h!]
@@ -429,12 +432,10 @@ We construct \textbf{concentric rings} to capture municipalities at different di
 \end{table}
 \end{center}
 
-\hyperlink{right}{\beamergotobutton{Right-wing}}
-
 \end{frame}
 
 
-\begin{frame}{Preliminary Results - Event Study}
+\begin{frame}{Results: Voting}
 
 \begin{figure}[htbp]
   \centering
@@ -445,7 +446,7 @@ We construct \textbf{concentric rings} to capture municipalities at different di
 \end{frame}
 
 
-\begin{frame}[label=event_all]{Preliminary Results - Event Study}
+\begin{frame}[label=event_all]{Results: Voting}
 
 \begin{figure}[htbp]
   \centering
@@ -457,6 +458,54 @@ We construct \textbf{concentric rings} to capture municipalities at different di
 
 \end{frame}
 
+\subsection{Mobilisation}
+
+\begin{frame}{Results: Mobilisation}
+
+\begin{figure}[htbp]
+  \centering
+  \caption{Effect of refugee camp exposure on resistance, by distance to camp}
+  \includegraphics[width=0.7\linewidth]{figures/results/mobilisation/poisson_count_total.png}
+   \begin{minipage}{0.75\textwidth}
+   \vspace{0.05in}
+        {\tiny Notes: This graph reports the estimates of Poisson regressions on the number of resistants. Error bars plot the interval confidence at 95\%. Standard errors are computed using Conley (1999). Specifications include region fixed effects and controls for surname-based birthplace composition, altitude, mining activity, buildings per capita, average rainfall and 1936 vote shares.\par}
+        \end{minipage}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}{Results: Mobilisation}
+
+\begin{figure}[htbp]
+  \centering
+  \caption{Effect of refugee camp exposure on resistance, by size of camp}
+  \includegraphics[width=0.7\linewidth]{figures/results/mobilisation/by_size_resistants.png}
+   \begin{minipage}{0.75\textwidth}
+   \vspace{0.05in}
+        {\tiny Notes: This graph reports the estimates of Poisson regressions on the number of resistants by camp size. Error bars plot the interval confidence at 95\%. Standard errors are computed using Conley (1999).\par}
+        \end{minipage}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}[shrink=15]{Results: Mobilisation}
+
+\begin{center}
+\begin{table}[h!]
+\footnotesize
+    \caption{Association creations by type, pre- and post-WWII}
+    \vspace{-1em}
+     \resizebox{\textwidth}{!}{\input{tables/results/mobilisation/att_associations_large_medium}}
+    \begin{minipage}{\textwidth}
+    \tiny
+    \centering
+    Note: Poisson DiD estimates at the canton level comparing cantons with medium/large refugee camps to those without. Controls include total canton population and 1936 left-wing vote share. Specifications include canton fixed effects and arrondissement $\times$ year fixed effects. *** p$<$0.01, ** p$<$0.05, * p$<$0.1.
+    \end{minipage}
+\end{table}
+\end{center}
+
+\end{frame}
+
 
 \section{Robustness check}
 
@@ -464,6 +513,12 @@ We construct \textbf{concentric rings} to capture municipalities at different di
 \begin{frame}[label=Robustness]{Robustness checks}
 
 \begin{itemize}
+
+\item \textbf{Synthetic DiD}:
+Results are robust to the synthetic difference-in-differences estimator, which relaxes the parallel trends assumption.
+\hyperlink{robustness0}{\beamergotobutton{See results}}
+
+\bigskip
 
 \item \textbf{Leave-one-region-out}:
 The estimated effect on socialist vote share is stable when excluding any single region.
@@ -475,19 +530,7 @@ The estimated effect on socialist vote share is stable when excluding any single
 Results remain consistent when estimating effects separately for the Nazi-occupied and non-occupied (Vichy) zones.
 \hyperlink{robustness2}{\beamergotobutton{See graph}}
 
-\bigskip
-
-\item \textbf{Excluding Proportional Representation years}:
-Excluding 1919 and 1924 does not alter the estimates.
-\hyperlink{robustness3}{\beamergotobutton{See graph}}
-
 \end{itemize}
-
-
-%In this context it refers to France switching its electoral system:
-
-%Proportional representation (PR) was used in the legislative elections of 1919 and 1924.
-%After that, France returned to a majoritarian system, where seats are awarded to the candidates who obtain the most votes in each district rather than proportionally to vote shares.
 
 \end{frame}
 
@@ -495,73 +538,6 @@ Excluding 1919 and 1924 does not alter the estimates.
 
 
 \section{Mechanisms}
-
-\begin{frame}{Mechanism: type of contact}
-
-%A Poisson regression coefficient β is interpreted as a percentage change:
-%So Poisson coefficients always represent multiplicative effects, not additive effects.
-%The Poisson regression coefficient β associated with a predictor X is the expected change, on the log scale, in the outcome Y per unit change in X. So holding all other variables in the model constant, increasing X by 1 unit (or going from 1 level to the next) multiplies the rate of Y by eβ.
-
-%Because β is estimated on the log scale, we need to convert it back to the original scale to interpret it.
-%resistants
-%β = 0.12
-%exp(0.12) = 1.128
-%multiplicative factor. you always interpret multiplicative factor relative to 1 (1 = no change from baseline).
-%1.128 – 1 = 0.128 = 12.8%
-%collaborators
-%exp(–1) = 0.368
-%1 – 0.368 = 0.632 = 63.2% decrease
-
-
-\begin{figure}[H]
-\centering
-
-\begin{minipage}{0.48\textwidth}
-\centering
-\caption{Poisson regression on number of resistants}
-\includegraphics[width=\linewidth]{figures/results/mobilisation/poisson_count_total.png}
-\end{minipage}
-\hfill
-\begin{minipage}{0.48\textwidth}
-\centering
-\caption{Poisson regression on number of collaborators}
-\includegraphics[width=\linewidth]{figures/results/mobilisation/by_size_resistants.png}
-\end{minipage}
-
-{\tiny Notes: Standard errors are computed using Conley (1999).\\
-The specifications include department fixed effects and birthplace surname composition, altitude, mining, density, and average rainfall as controls.\par
-}
-
-%A Poisson regression coefficient β is interpreted as a percentage change:
-%≈ 12.8% increase in the expected number of resistants.Given the mean of 11.8 resistants, the absolute effect is:11.8×0.128≈1.5additional resistants
-%Municipalities exposed to the treatment have about 1.5 times more collaborators.Given the mean of 1.7 collaborators, the absolute effect is:
-%2.5 extra collaborators
-
-%\vspace{0.15cm}
-
-%\centering
-%\footnotesize
-%\begin{minipage}{0.85\textwidth}
-%\centering
-%"My mother always said that she didn't do it for France — she did it for freedom."\\[0.6em]
-%\textit{--- Ant\`{o}nia Pallach}
-%\end{minipage}
-
-
-
-\end{figure}
-
-%Each point reports the Poisson coefficient for a given buffer radius (left: resistants; right: collaborators).
-
-%%The outcomes analysed here (resistance participation and collaboration) reflect behavior among a politically selective subset of the municipal population rather than population-wide responses. We are talking about highly politically engaged individuals. Consequently, if exposure to Republican refugees diffuse their ideas, we would expect that the segment more exposed are those that are more politically involved.
-
-%at the margins of the political spectrum
-%% Some examples of organization that got involved with the welcoming of refugees: the General Confederation of Labour (CGT) and some of its unions, such as the teachers' union, federations of cooperatives
-%%The figures display the estimated coefficients from Poisson regressions examining the effect of camp proximity on the number of people involved in the resistance/ collaboration. Each point corresponds to a different buffer radius. Standard errors are computed using Conley (1999) to account for spatial correlation. The specification include department fixed effects and birthplace surname composition, altitude, mining, density, and average rainfall as controls.
-
-
-\end{frame}
-
 
 \begin{frame}[label=refugees]{Mechanisms: Demographic change}
 
@@ -624,19 +600,20 @@ The specifications include department fixed effects and birthplace surname compo
 
 \begin{frame}[label=Balance, shrink=5]{Balance test}
 
+\begin{center}
 \begin{table}[h!]
-    \centering
+\footnotesize
     \caption{Balance test for municipalities with and without camps}
-    \resizebox{0.63\textwidth}{!}{%
-        \input{tables/descriptive/balance_general}
-    }
-    \label{table:balance}
-    \begin{minipage}{0.6\textwidth}
-        \tiny
-        Absolute standardized differences are below the conventional threshold of 0.25 \citep{ImbensRubin2015}.
+    \vspace{-2em}
+     \resizebox{0.3\textwidth}{!}{\input{tables/descriptive/balance_general}}
+    \begin{minipage}{\textwidth}
+    \tiny
+    \centering
+    Note: Absolute standardized differences are below the conventional threshold of 0.25 \citep{ImbensRubin2015}.
     \end{minipage}
-
 \end{table}
+\end{center}
+
 \hyperlink{Strategy}{\beamergotobutton{Go back}}
 
 \end{frame}
@@ -823,22 +800,46 @@ The specifications include department fixed effects and birthplace surname compo
 
 
 
-\begin{frame}[label=robustness3]{Robustness check}
+\begin{frame}[label=robustness0, shrink=5]{Robustness check: Synthetic DiD}
 
+\begin{center}
+\begin{table}[h!]
+\footnotesize
+    \caption{Impact of refugee camp exposure on vote shares — Synthetic DiD}
+    \vspace{-2em}
+     \resizebox{0.3\textwidth}{!}{\input{tables/results/political/synthetic_rings_combined}}
+    \begin{minipage}{\textwidth}
+    \tiny
+    \centering
+    Note: The table reports synthetic DiD estimates by distance ring. Control group: municipalities within 20--40km. Standard errors obtained via placebo procedure. *** p$<$0.01, ** p$<$0.05, * p$<$0.1.
+    \end{minipage}
+\end{table}
+\end{center}
+
+\hyperlink{robustness0b}{\beamergotobutton{Event study}} \hyperlink{Robustness}{\beamergotobutton{Go back}}
+
+\end{frame}
+
+\begin{frame}[label=robustness0b]{Robustness check: Synthetic DiD — Event study}
+
+\begin{columns}
+\begin{column}{0.5\textwidth}
 \begin{figure}[htbp]
   \centering
-  \caption{Effect on socialist vote share — Excluding Proportional Representation years}
-  \includegraphics[width=0.65\linewidth]{figures/results/political/comparison_sfio.png}
-  \label{fig:excluded_pr}
-    \begin{minipage}{0.7\textwidth}
-    \vspace{0.1in}
-    {\tiny Notes: This figure reports event–study estimates excluding the 1919 and 1924 elections, the only years held under Proportional Representation in France. Error bars show 95\% confidence intervals. Standard errors are clustered at the municipality level.\par}
-    \end{minipage}
+  \caption{Socialist vote share}
+  \includegraphics[width=\linewidth]{figures/results/political/sdid_event_SFIO.png}
 \end{figure}
+\end{column}
+\begin{column}{0.5\textwidth}
+\begin{figure}[htbp]
+  \centering
+  \caption{Communist vote share}
+  \includegraphics[width=\linewidth]{figures/results/political/sdid_event_PCF.png}
+\end{figure}
+\end{column}
+\end{columns}
 
-%These were the only two legislative elections in the period that used proportional representation, while all others (including 1936, your pre-treatment baseline) used majoritarian rules.
-
-\hyperlink{Robustness}{\beamergotobutton{Go back}}
+\hyperlink{robustness0}{\beamergotobutton{Table}} \hyperlink{Robustness}{\beamergotobutton{Go back}}
 
 \end{frame}
 
