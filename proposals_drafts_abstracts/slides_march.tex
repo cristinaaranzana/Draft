@@ -123,10 +123,10 @@
     \begin{tikzpicture}[remember picture,overlay]
       \node[anchor=south west, xshift=0.5cm, yshift=0.5cm]
         at (current page.south west)
-        {\includegraphics[height=0.8cm]{pictures/logo_ub}};
+        {\includegraphics[height=0.8cm]{../pictures/logo_ub}};
       \node[anchor=south east, xshift=-0.5cm, yshift=0.5cm]
         at (current page.south east)
-        {\includegraphics[height=1cm]{pictures/logo_ieb}};
+        {\includegraphics[height=1cm]{../pictures/logo_ieb}};
     \end{tikzpicture}
 
   \end{frame}
@@ -255,7 +255,7 @@
 \end{itemize}
 %Considering the last census available of 1936, the total population of France was 41967056 habitants, this represents 1,19% of the population. The shock represents 22% of the total foreign population in 1939. The total foreign population was 2198236 in 1939.
   \begin{center}
-    \includegraphics[width=0.4\textwidth]{pictures/image2.jpg}
+    \includegraphics[width=0.4\textwidth]{../pictures/image2.jpg}
   \end{center}
 
 \end{frame}
@@ -268,7 +268,7 @@
 \end{itemize}
 
   \begin{center}
-    \includegraphics[width=0.6\textwidth]{pictures/Retirada.jpg}
+    \includegraphics[width=0.6\textwidth]{../pictures/Retirada.jpg}
   \end{center}
 \end{frame}
 
@@ -343,7 +343,7 @@
 \centering
 \caption{Location of the refugee centers}
 \vspace{-1em}
-\includegraphics[width=0.55\linewidth]{figures/descriptives/maps/map7.png}
+\includegraphics[width=0.55\linewidth]{../../figures/map7.png}
 \end{figure}
 
 \end{frame}
@@ -386,8 +386,8 @@ We construct \textbf{concentric rings} to capture municipalities at different di
 \begin{table}[h!]
 \footnotesize
     \caption{Impact of refugee camp exposure on turnout}
-    \vspace{-2em}
-     \resizebox{0.3\textwidth}{!}{\input{tables/results/political/spatial_results_turnout}}
+    \vspace{-1em}
+     \resizebox{0.4\textwidth}{!}{\input{../../tables/results/political/spatial_results_turnout}}
     \begin{minipage}{\textwidth}
     \tiny
     \centering
@@ -404,7 +404,8 @@ We construct \textbf{concentric rings} to capture municipalities at different di
 \begin{table}[h!]
 \footnotesize
     \caption{Impact of refugee camp exposure on the socialist vote share}
-     \resizebox{0.3\textwidth}{!}{\input{tables/results/political/spatial_results_pvoixSFIO}}
+    \vspace{-1em}
+     \resizebox{0.4\textwidth}{!}{\input{../../tables/results/political/spatial_results_pvoixSFIO}}
     \begin{minipage}{\textwidth}
     \tiny
     \centering
@@ -423,7 +424,8 @@ We construct \textbf{concentric rings} to capture municipalities at different di
 \begin{table}[h!]
 \footnotesize
     \caption{Impact of refugee camp exposure on the communist vote share}
-     \resizebox{0.3\textwidth}{!}{\input{tables/results/political/spatial_results_pvoixPCF}}
+    \vspace{-1em}
+     \resizebox{0.4\textwidth}{!}{\input{../../tables/results/political/spatial_results_pvoixPCF}}
     \begin{minipage}{\textwidth}
     \tiny
     \centering
@@ -440,7 +442,7 @@ We construct \textbf{concentric rings} to capture municipalities at different di
 \begin{figure}[htbp]
   \centering
   \caption{Impact of refugee camp exposure on turnout}
-  \includegraphics[width=0.6\linewidth]{figures/results/political/turnout_event_study.png}
+  \includegraphics[width=0.6\linewidth]{../../figures/results/political/turnout_event_study.png}
 \end{figure}
 
 \end{frame}
@@ -451,10 +453,20 @@ We construct \textbf{concentric rings} to capture municipalities at different di
 \begin{figure}[htbp]
   \centering
   \caption{Impact of refugee camp exposure on the communist and socialist vote share}
-  \includegraphics[width=0.5\linewidth]{figures/results/political/event_study_all.png}
+  \includegraphics[width=0.55\linewidth]{../../figures/results/political/event_study_all.png}
 \end{figure}
 
 \hyperlink{SFIO_es}{\beamergotobutton{SFIO by ring}} \hyperlink{PCF_es}{\beamergotobutton{PCF by ring}}
+
+\end{frame}
+
+\begin{frame}{Results: Voting}
+
+\begin{figure}[htbp]
+  \centering
+  \caption{Impact of refugee camp exposure on voting - by size of the camp}
+  \includegraphics[width=0.6\linewidth]{../../figures/results/political/effect_size.png}
+\end{figure}
 
 \end{frame}
 
@@ -465,10 +477,10 @@ We construct \textbf{concentric rings} to capture municipalities at different di
 \begin{figure}[htbp]
   \centering
   \caption{Effect of refugee camp exposure on resistance, by distance to camp}
-  \includegraphics[width=0.7\linewidth]{figures/results/mobilisation/poisson_count_total.png}
-   \begin{minipage}{0.75\textwidth}
+  \includegraphics[width=0.5\linewidth]{../../figures/results/resistance/poisson_count_total.png}
+   \begin{minipage}{0.5\textwidth}
    \vspace{0.05in}
-        {\tiny Notes: This graph reports the estimates of Poisson regressions on the number of resistants. Error bars plot the interval confidence at 95\%. Standard errors are computed using Conley (1999). Specifications include region fixed effects and controls for surname-based birthplace composition, altitude, mining activity, buildings per capita, average rainfall and 1936 vote shares.\par}
+        {\tiny Notes: This graph reports the estimates of Poisson regressions on the number of resistants. Standard errors are computed using Conley (1999). Specifications include region fixed effects and controls for surname-based birthplace composition, altitude, mining activity, buildings per capita, average rainfall and 1936 vote shares.\par}
         \end{minipage}
 \end{figure}
 
@@ -479,24 +491,24 @@ We construct \textbf{concentric rings} to capture municipalities at different di
 \begin{figure}[htbp]
   \centering
   \caption{Effect of refugee camp exposure on resistance, by size of camp}
-  \includegraphics[width=0.7\linewidth]{figures/results/mobilisation/by_size_resistants.png}
-   \begin{minipage}{0.75\textwidth}
+  \includegraphics[width=0.5\linewidth]{../../figures/results/resistance/by_size_resistants.png}
+   \begin{minipage}{0.5\textwidth}
    \vspace{0.05in}
-        {\tiny Notes: This graph reports the estimates of Poisson regressions on the number of resistants by camp size. Error bars plot the interval confidence at 95\%. Standard errors are computed using Conley (1999).\par}
+        {\tiny Notes: This graph reports the estimates of Poisson regressions on the number of resistants by camp size. Standard errors are computed using Conley (1999).\par}
         \end{minipage}
 \end{figure}
 
 \end{frame}
 
-\begin{frame}[shrink=15]{Results: Mobilisation}
+\begin{frame}{Results: Mobilisation}
 
 \begin{center}
 \begin{table}[h!]
 \footnotesize
     \caption{Association creations by type, pre- and post-WWII}
     \vspace{-1em}
-     \resizebox{\textwidth}{!}{\input{tables/results/mobilisation/att_associations_large_medium}}
-    \begin{minipage}{\textwidth}
+     \resizebox{0.5\textwidth}{!}{\input{../../tables/results/political/att_associations_large_medium}}
+    \begin{minipage}{0.5\textwidth}
     \tiny
     \centering
     Note: Poisson DiD estimates at the canton level comparing cantons with medium/large refugee camps to those without. Controls include total canton population and 1936 left-wing vote share. Specifications include canton fixed effects and arrondissement $\times$ year fixed effects. *** p$<$0.01, ** p$<$0.05, * p$<$0.1.
@@ -541,7 +553,7 @@ Results remain consistent when estimating effects separately for the Nazi-occupi
 
 \begin{frame}[label=refugees]{Mechanisms: Demographic change}
 
-\input{tables/mechanisms/refugees_camps}
+\input{../../tables/results/refugees_camps}
 
 \hyperlink{settlement}{\beamergotobutton{See graph}}
 
@@ -580,7 +592,7 @@ Results remain consistent when estimating effects separately for the Nazi-occupi
 
 \begin{frame}[label=Presse1]
   \begin{center}
-    \includegraphics[width=0.5\textwidth]{pictures/presse1.jpg}
+    \includegraphics[width=0.5\textwidth]{../pictures/presse1.jpg}
   \end{center}
 
 \hyperlink{Hypothesis}{\beamergotobutton{Go back}}
@@ -589,7 +601,7 @@ Results remain consistent when estimating effects separately for the Nazi-occupi
 
 \begin{frame}[label=Presse2]
   \begin{center}
-    \includegraphics[width=0.4\textwidth]{pictures/presse3.pdf}
+    \includegraphics[width=0.4\textwidth]{../pictures/presse3.pdf}
   \end{center}
 %the presence of the refugees camps raise serious porblems which requires an immediate solution if we want to avoid serious incidents
 %these refugies, are we forced to keep them?
@@ -605,8 +617,8 @@ Results remain consistent when estimating effects separately for the Nazi-occupi
 \footnotesize
     \caption{Balance test for municipalities with and without camps}
     \vspace{-2em}
-     \resizebox{0.3\textwidth}{!}{\input{tables/descriptive/balance_general}}
-    \begin{minipage}{\textwidth}
+     \resizebox{0.6\textwidth}{!}{\input{../../tables/descriptive/balance_general}}
+    \begin{minipage}{0.6\textwidth}
     \tiny
     \centering
     Note: Absolute standardized differences are below the conventional threshold of 0.25 \citep{ImbensRubin2015}.
@@ -653,7 +665,7 @@ Results remain consistent when estimating effects separately for the Nazi-occupi
 
 \begin{frame}[label=Buffers]{Buffer - Example}
   \begin{center}
-    \includegraphics[width=0.7\textwidth]{figures/descriptives/maps/map_example_methodology.png}
+    \includegraphics[width=0.5\textwidth]{../../figures/map_example_methodology.png}
   \end{center}
 
 \hyperlink{Strategy}{\beamergotobutton{Go back}}
@@ -662,7 +674,7 @@ Results remain consistent when estimating effects separately for the Nazi-occupi
 
 \begin{frame}[label=Histogram]{Histogram}
   \begin{center}
-    \includegraphics[width=0.7\textwidth]{figures/descriptives/mun_exposure.png}
+    \includegraphics[width=0.7\textwidth]{../../figures/mun_exposure.png}
   \end{center}
 
 \hyperlink{Strategy}{\beamergotobutton{Go back}}
@@ -674,8 +686,8 @@ Results remain consistent when estimating effects separately for the Nazi-occupi
 \begin{figure}[htbp]
   \centering
   \caption{Impact of Refugee Camp Exposure on socialist vote share by buffer size}
-  \includegraphics[width=0.75\linewidth]{figures/results/political/pvoixSFIO_event_study.png}
-   \begin{minipage}{0.75\textwidth}
+  \includegraphics[width=0.7\linewidth]{../../figures/results/political/pvoixSFIO_event_study.png}
+   \begin{minipage}{0.7\textwidth}
    \vspace{0.05in}
         {\tiny This graph reports the estimates of the event study by buffer. Error bars plot the interval confidence at 95\%. Standard errors are clustered at the municipality level.\par}
         \end{minipage}
@@ -691,8 +703,8 @@ Results remain consistent when estimating effects separately for the Nazi-occupi
 \begin{figure}[htbp]
   \centering
   \caption{Impact of Refugee Camp Exposure on communist vote share by buffer size}
-  \includegraphics[width=0.75\linewidth]{figures/results/political/pvoixPCF_event_study.png}
-   \begin{minipage}{0.75\textwidth}
+  \includegraphics[width=0.7\linewidth]{../../figures/results/political/pvoixPCF_event_study.png}
+   \begin{minipage}{0.7\textwidth}
    \vspace{0.05in}
         {\tiny This graph reports the estimates of the event study by buffer. Error bars plot the interval confidence at 95\%. Standard errors are clustered at the municipality level.\par}
         \end{minipage}
@@ -711,7 +723,7 @@ Results remain consistent when estimating effects separately for the Nazi-occupi
 \begin{table}[h!]
 \footnotesize
     \caption{Effect of refugee camp exposure on right-wing votes}
-     \resizebox{0.7\textwidth}{!}{\input{tables/results/political/spatial_results_pvoteD}}
+     \resizebox{0.5\textwidth}{!}{\input{../../tables/results/political/spatial_results_pvoteD}}
     \begin{minipage}{\textwidth}  % Adjust width here
     \scriptsize
     \centering
@@ -737,33 +749,18 @@ Results remain consistent when estimating effects separately for the Nazi-occupi
 
 \end{frame}
 
-\begin{frame}[label=settlement]{Refugee settlement}
 
-\begin{figure}[htbp]
-  \centering
-  \caption{Refugee settlement by distance to camps}
-  \includegraphics[width=0.7\linewidth]{figures/descriptives/refugees.png}
-  \label{fig:by_region}
-   \begin{minipage}{0.7\textwidth}
-   \vspace{0.1in}
-        {\tiny Notes: This graph reports the estimates of having a camp on the number of refugees in log, increasing the distance of the buffer.\par}
-        \end{minipage}
-\end{figure}
-
-\hyperlink{refugee}{\beamergotobutton{Go back}}
-
-\end{frame}
 
 \begin{frame}[label=robustness1]{Robustness check}
 
 \begin{figure}[htbp]
   \centering
   \caption{Effect on socialist vote share - Leave one out results}
-  \includegraphics[width=0.7\linewidth]{figures/results/political/by_region_sfio.png}
+  \includegraphics[width=0.4\linewidth]{../../figures/results/political/by_region_sfio.png}
   \label{fig:by_region}
-   \begin{minipage}{0.7\textwidth}
+   \begin{minipage}{0.4\textwidth}
    \vspace{0.1in}
-        {\tiny Notes: This graph reports the estimates leaving one region out at the time of the spatial classic TWFE. Error bars plot the interval confidence at 95\%. Standard errors are clustered at the municipal level.\par}
+        {\tiny \par}
         \end{minipage}
 \end{figure}
 
@@ -774,7 +771,7 @@ Results remain consistent when estimating effects separately for the Nazi-occupi
 \begin{frame}[label=robustness2]{Demarcation Line}
 
   \begin{center}
-  \includegraphics[width=0.5\textwidth]{pictures/demarcation.png}
+  \includegraphics[width=0.45\textwidth]{../pictures/demarcation.png}
   \end{center}
 
 \hyperlink{Robustness}{\beamergotobutton{Go back}}
@@ -786,11 +783,11 @@ Results remain consistent when estimating effects separately for the Nazi-occupi
 \begin{figure}[htbp]
   \centering
   \caption{Effect on socialist vote share - Occupied vs Non-Occupied areas}
-  \includegraphics[width=0.65\linewidth]{figures/results/political/occupied_sfio.png}
+  \includegraphics[width=0.4\linewidth]{../../figures/results/political/occupied_sfio.png}
   \label{fig:occupied}
-    \begin{minipage}{0.7\textwidth}
+    \begin{minipage}{0.4\textwidth}
    \vspace{0.1in}
-   {\tiny Notes: This figure reports the event study separately for the Nazi-occupied zone and the non-occupied Vichy zone. Error bars show 95\% confidence intervals. Standard errors are clustered at the municipality level.\par}
+   {\tiny \par}
         \end{minipage}
 \end{figure}
 
@@ -806,15 +803,15 @@ Results remain consistent when estimating effects separately for the Nazi-occupi
 \begin{table}[h!]
 \footnotesize
     \caption{Impact of refugee camp exposure on vote shares — Synthetic DiD}
-    \vspace{-2em}
-     \resizebox{0.3\textwidth}{!}{\input{tables/results/political/synthetic_rings_combined}}
-    \begin{minipage}{\textwidth}
+     \resizebox{0.5\textwidth}{!}{\input{../../tables/results/political/synthetic_rings_combined}}
+    \begin{minipage}{0.5\textwidth}
     \tiny
     \centering
     Note: The table reports synthetic DiD estimates by distance ring. Control group: municipalities within 20--40km. Standard errors obtained via placebo procedure. *** p$<$0.01, ** p$<$0.05, * p$<$0.1.
     \end{minipage}
 \end{table}
 \end{center}
+
 
 \hyperlink{robustness0b}{\beamergotobutton{Event study}} \hyperlink{Robustness}{\beamergotobutton{Go back}}
 
@@ -827,14 +824,14 @@ Results remain consistent when estimating effects separately for the Nazi-occupi
 \begin{figure}[htbp]
   \centering
   \caption{Socialist vote share}
-  \includegraphics[width=\linewidth]{figures/results/political/sdid_event_SFIO.png}
+  \includegraphics[width=\linewidth]{../../figures/results/political/sdid_event_SFIO.png}
 \end{figure}
 \end{column}
 \begin{column}{0.5\textwidth}
 \begin{figure}[htbp]
   \centering
   \caption{Communist vote share}
-  \includegraphics[width=\linewidth]{figures/results/political/sdid_event_PCF.png}
+  \includegraphics[width=\linewidth]{../../figures/results/political/sdid_event_PCF_pop.png}
 \end{figure}
 \end{column}
 \end{columns}
@@ -849,7 +846,7 @@ Results remain consistent when estimating effects separately for the Nazi-occupi
 \centering
 \tiny   % <--- hace la tabla más pequeña
 \caption{Mean vote shares by party and year}
-\input{tables/descriptive/means_votes}
+\input{../../tables/descriptive/means_votes}
 \label{tab:means_votes}
 
 {\textit{Note:} A dash (--) indicates that the party did not run in that election. \\
